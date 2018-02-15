@@ -1,0 +1,53 @@
+{
+  "name": "crimson-tide",
+  "version": "0.0.1",
+  "description": "Reusable React components for The University of Alabama 🐘",
+  "main": "dist/index.js",
+  "author": "Coston Perkins <coston.perkins@ua.edu> (https://coston.io)",
+  "homepage": "https://github.com/ua-oira/crimson-tide",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ua-oira/crimson-tide.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ua-oira/crimson-tide/issues"
+  },
+  "license": "GNU General Public License v3.0",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "scripts": {
+    "build": "babel -d dist src",
+    "clean": "rm -rf dist && mkdir dist",
+    "watch": "babel -w -d dist src",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
+    "test": "no tests yet!",
+    "preversion": "npm run clean && npm run format && npm run build",
+    "postpublish": "git push && git push --tag"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "chai": "^4.1.2",
+    "core-js": "^2.5.3",
+    "mocha": "^5.0.0",
+    "prettier": "^1.10.2",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-addons-test-utils": "^15.6.2",
+    "react-shallow-output": "^0.2.0"
+  },
+  "keywords": [
+    "react",
+    "react-component"
+  ],
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "styled-components": "^3.1.0-3"
+  }
+}
