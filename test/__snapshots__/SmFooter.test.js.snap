@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render SmFooter 1`] = `
+<styled.div>
+  <styled.footer>
+    <styled.div>
+      <styled.a
+        href="http://ua.edu"
+      >
+        © 
+        2018
+         The University of Alabama
+      </styled.a>
+    </styled.div>
+    <styled.div>
+      <styled.a
+        href="http://maps.apple.com/?q=33.2084338+-87.5472800"
+        title="Building Name and Address"
+      >
+        East Annex
+      </styled.a>
+       | 
+      <Styled(Obfuscate)
+        tel="205-348-7200"
+        title="Telephone Number"
+      >
+        205-348-7200
+      </Styled(Obfuscate)>
+       | 
+      <styled.a
+        href="http://oira.ua.edu/new/contact/"
+        title="Contact"
+      >
+        OIRA Contact
+      </styled.a>
+    </styled.div>
+  </styled.footer>
+</styled.div>
+`;
