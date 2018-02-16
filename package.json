@@ -1,6 +1,6 @@
 {
   "name": "crimson-tide",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "description": "Reusable React components for The University of Alabama 🐘",
   "main": "dist/index.js",
   "author": "Coston Perkins <coston.perkins@ua.edu> (https://coston.io)",
@@ -21,9 +21,22 @@
     "clean": "rm -rf dist && mkdir dist",
     "watch": "babel -w -d dist src",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
-    "test": "no tests yet!",
+    "test": "jest",
     "preversion": "npm install && npm run clean && npm run format && npm run build",
-    "postpublish": "git push && git push --tag"
+    "postpublish": "git push && git push --tag",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "jest": {
+    "setupFiles": [
+      "./test/jestsetup.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "moduleNameMapper": {
+      "^.+\\.(css|scss)$": "identity-obj-proxy"
+    }
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -33,12 +46,20 @@
     "babel-preset-react": "^6.24.1",
     "chai": "^4.1.2",
     "core-js": "^2.5.3",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^22.3.0",
     "mocha": "^5.0.0",
     "prettier": "^1.10.2",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-addons-test-utils": "^15.6.2",
-    "react-shallow-output": "^0.2.0"
+    "react-dom": "^16.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-shallow-output": "^0.2.0",
+    "react-test-renderer": "^16.2.0"
   },
   "keywords": [
     "react",
@@ -48,6 +69,8 @@
     "test": "test"
   },
   "dependencies": {
+    "gatsby-link": "^1.6.37",
+    "react-helmet": "^5.2.0",
     "react-obfuscate": "^1.3.0",
     "styled-components": "^3.1.0-3"
   }

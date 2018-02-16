@@ -19,7 +19,7 @@ var PageTitle = function PageTitle(props) {
     'div',
     null,
     _react2.default.createElement(_reactHelmet2.default, {
-      title: (props.name || '') + ' | ALAIR',
+      title: '' + (props.name || ''),
       meta: [{
         name: 'description',
         content: props.description || props.name + ' at the Office of Institutional Research and Assessment of The University of Alabama'

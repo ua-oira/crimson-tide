@@ -29,7 +29,7 @@ var _chimeIn = require('./logos/chime-in.svg');
 
 var _chimeIn2 = _interopRequireDefault(_chimeIn);
 
-var _oiraStyles = require('./oira-styles.css');
+var _oiraStyles = require('./styles/oira-styles.css');
 
 var _oiraStyles2 = _interopRequireDefault(_oiraStyles);
 
