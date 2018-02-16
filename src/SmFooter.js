@@ -36,7 +36,6 @@ const SmFooter = props => {
   )
 }
 
-
 export default SmFooter
 
 export const ColorWrapper = styled.div`
