@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _templateObject = _taggedTemplateLiteral(['\n  margin: ', ';\n  max-width: ', ';\n  min-height: ', ';\n  padding: ', ';\n'], ['\n  margin: ', ';\n  max-width: ', ';\n  min-height: ', ';\n  padding: ', ';\n']);
+var _templateObject = _taggedTemplateLiteral(['\n  margin: 1em auto 1em auto;\n  max-width: 960px;\n  min-height: 500px;\n  padding: 0px 1.0875rem 1.45rem;\n'], ['\n  margin: 1em auto 1em auto;\n  max-width: 960px;\n  min-height: 500px;\n  padding: 0px 1.0875rem 1.45rem;\n']);
 
 var _react = require('react');
 
@@ -18,26 +18,5 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var Main = _styledComponents2.default.main.attrs({
-  margin: function margin(props) {
-    return props.margin || '1em auto 1em auto';
-  },
-  maxWidth: function maxWidth(props) {
-    return props.maxWidth || '960px';
-  },
-  minHeight: function minHeight(props) {
-    return props.minHeight || '500px';
-  },
-  padding: function padding(props) {
-    return props.padding || '0px 1.0875rem 1.45rem';
-  }
-})(_templateObject, function (props) {
-  return props.margin;
-}, function (props) {
-  return props.maxWidth;
-}, function (props) {
-  return props.minHeight;
-}, function (props) {
-  return props.padding;
-});
+var Main = _styledComponents2.default.main(_templateObject);
 exports.default = Main;
