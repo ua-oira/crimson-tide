@@ -1,6 +1,6 @@
 {
   "name": "crimson-tide",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Reusable React components for The University of Alabama 🐘",
   "main": "dist/index.js",
   "author": "Coston Perkins <coston.perkins@ua.edu> (https://coston.io)",
@@ -17,7 +17,7 @@
     "node": ">= 0.10.0"
   },
   "scripts": {
-    "build": "babel -d dist src",
+    "build": "babel -d dist src --copy-files",
     "clean": "rm -rf dist && mkdir dist",
     "watch": "babel -w -d dist src",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
