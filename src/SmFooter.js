@@ -2,7 +2,6 @@ import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 import Obfuscate from 'react-obfuscate'
-import LogoImage from './gdgd.svg'
 
 const SmFooter = props => {
   let date = new Date()
@@ -50,17 +49,17 @@ export const ColorWrapper = styled.div`
     display: none;
   }
 `
-export const Logo = styled(Link)`
-  display: inline-block;
-  width: 328px;
-  height: 80px;
-  border-bottom: none;
-  background: url(${LogoImage});
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  text-indent: -9999px;
-  z-index: 3;
-`
+// export const Logo = styled(Link)`
+//   display: inline-block;
+//   width: 328px;
+//   height: 80px;
+//   border-bottom: none;
+//   background: url(${LogoImage});
+//   background-size: 100% 100%;
+//   background-repeat: no-repeat;
+//   text-indent: -9999px;
+//   z-index: 3;
+// `
 export const LowFooter = styled.footer`
   font-size: 0.88em;
   line-height: 0.88em;

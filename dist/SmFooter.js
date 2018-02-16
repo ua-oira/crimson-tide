@@ -3,16 +3,15 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.StyledLink = exports.Contact = exports.Copyright = exports.RightSide = exports.LeftSide = exports.LowFooter = exports.Logo = exports.ColorWrapper = undefined;
+exports.StyledLink = exports.Contact = exports.Copyright = exports.RightSide = exports.LeftSide = exports.LowFooter = exports.ColorWrapper = undefined;
 
 var _templateObject = _taggedTemplateLiteral(['\n  position: relative;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  border-top: 1px solid #eee;\n  color: black;\n  padding-top: 0.5em;\n  @media print {\n    display: none;\n  }\n'], ['\n  position: relative;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  border-top: 1px solid #eee;\n  color: black;\n  padding-top: 0.5em;\n  @media print {\n    display: none;\n  }\n']),
-    _templateObject2 = _taggedTemplateLiteral(['\n  display: inline-block;\n  width: 328px;\n  height: 80px;\n  border-bottom: none;\n  background: url(', ');\n  background-size: 100% 100%;\n  background-repeat: no-repeat;\n  text-indent: -9999px;\n  z-index: 3;\n'], ['\n  display: inline-block;\n  width: 328px;\n  height: 80px;\n  border-bottom: none;\n  background: url(', ');\n  background-size: 100% 100%;\n  background-repeat: no-repeat;\n  text-indent: -9999px;\n  z-index: 3;\n']),
-    _templateObject3 = _taggedTemplateLiteral(['\n  font-size: 0.88em;\n  line-height: 0.88em;\n  display: flex;\n  color: black;\n  flex-flow: row wrap;\n  margin: 0 auto;\n  width: 100%;\n  padding: 20px 1.0875rem;\n  max-width: 960px;\n  justify-content: space-between;\n  align-items: center;\n  @media (max-width: 768px) {\n    flex-flow: column;\n  }\n'], ['\n  font-size: 0.88em;\n  line-height: 0.88em;\n  display: flex;\n  color: black;\n  flex-flow: row wrap;\n  margin: 0 auto;\n  width: 100%;\n  padding: 20px 1.0875rem;\n  max-width: 960px;\n  justify-content: space-between;\n  align-items: center;\n  @media (max-width: 768px) {\n    flex-flow: column;\n  }\n']),
-    _templateObject4 = _taggedTemplateLiteral(['\n  float: left;\n'], ['\n  float: left;\n']),
-    _templateObject5 = _taggedTemplateLiteral(['\n  text-align: right;\n  float: Right;\n  @media (max-width: 768px) {\n    text-align: center;\n  }\n'], ['\n  text-align: right;\n  float: Right;\n  @media (max-width: 768px) {\n    text-align: center;\n  }\n']),
-    _templateObject6 = _taggedTemplateLiteral(['\n  border-bottom: none;\n  line-height: 19px;\n  margin-bottom: 6px;\n  justify: right;\n'], ['\n  border-bottom: none;\n  line-height: 19px;\n  margin-bottom: 6px;\n  justify: right;\n']),
-    _templateObject7 = _taggedTemplateLiteral(['\n  font-size: 12px;\n  line-height: 12px;\n  font-family: \'Space Mono\', monospace;\n'], ['\n  font-size: 12px;\n  line-height: 12px;\n  font-family: \'Space Mono\', monospace;\n']),
-    _templateObject8 = _taggedTemplateLiteral(['\n  color: black;\n  font-size: 1.1em;\n  text-decoration: none;\n  &:hover {\n    color: #990000;\n  }\n  &:active {\n    font-weight: bold;\n  }\n  @media (max-width: 768px) {\n    line-height: 1.5em;\n  }\n'], ['\n  color: black;\n  font-size: 1.1em;\n  text-decoration: none;\n  &:hover {\n    color: #990000;\n  }\n  &:active {\n    font-weight: bold;\n  }\n  @media (max-width: 768px) {\n    line-height: 1.5em;\n  }\n']);
+    _templateObject2 = _taggedTemplateLiteral(['\n  font-size: 0.88em;\n  line-height: 0.88em;\n  display: flex;\n  color: black;\n  flex-flow: row wrap;\n  margin: 0 auto;\n  width: 100%;\n  padding: 20px 1.0875rem;\n  max-width: 960px;\n  justify-content: space-between;\n  align-items: center;\n  @media (max-width: 768px) {\n    flex-flow: column;\n  }\n'], ['\n  font-size: 0.88em;\n  line-height: 0.88em;\n  display: flex;\n  color: black;\n  flex-flow: row wrap;\n  margin: 0 auto;\n  width: 100%;\n  padding: 20px 1.0875rem;\n  max-width: 960px;\n  justify-content: space-between;\n  align-items: center;\n  @media (max-width: 768px) {\n    flex-flow: column;\n  }\n']),
+    _templateObject3 = _taggedTemplateLiteral(['\n  float: left;\n'], ['\n  float: left;\n']),
+    _templateObject4 = _taggedTemplateLiteral(['\n  text-align: right;\n  float: Right;\n  @media (max-width: 768px) {\n    text-align: center;\n  }\n'], ['\n  text-align: right;\n  float: Right;\n  @media (max-width: 768px) {\n    text-align: center;\n  }\n']),
+    _templateObject5 = _taggedTemplateLiteral(['\n  border-bottom: none;\n  line-height: 19px;\n  margin-bottom: 6px;\n  justify: right;\n'], ['\n  border-bottom: none;\n  line-height: 19px;\n  margin-bottom: 6px;\n  justify: right;\n']),
+    _templateObject6 = _taggedTemplateLiteral(['\n  font-size: 12px;\n  line-height: 12px;\n  font-family: \'Space Mono\', monospace;\n'], ['\n  font-size: 12px;\n  line-height: 12px;\n  font-family: \'Space Mono\', monospace;\n']),
+    _templateObject7 = _taggedTemplateLiteral(['\n  color: black;\n  font-size: 1.1em;\n  text-decoration: none;\n  &:hover {\n    color: #990000;\n  }\n  &:active {\n    font-weight: bold;\n  }\n  @media (max-width: 768px) {\n    line-height: 1.5em;\n  }\n'], ['\n  color: black;\n  font-size: 1.1em;\n  text-decoration: none;\n  &:hover {\n    color: #990000;\n  }\n  &:active {\n    font-weight: bold;\n  }\n  @media (max-width: 768px) {\n    line-height: 1.5em;\n  }\n']);
 
 var _react = require('react');
 
@@ -29,10 +28,6 @@ var _styledComponents2 = _interopRequireDefault(_styledComponents);
 var _reactObfuscate = require('react-obfuscate');
 
 var _reactObfuscate2 = _interopRequireDefault(_reactObfuscate);
-
-var _gdgd = require('./gdgd.svg');
-
-var _gdgd2 = _interopRequireDefault(_gdgd);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -88,13 +83,23 @@ var SmFooter = function SmFooter(props) {
 
 exports.default = SmFooter;
 var ColorWrapper = exports.ColorWrapper = _styledComponents2.default.div(_templateObject);
-var Logo = exports.Logo = (0, _styledComponents2.default)(_gatsbyLink2.default)(_templateObject2, _gdgd2.default);
-var LowFooter = exports.LowFooter = _styledComponents2.default.footer(_templateObject3);
+// export const Logo = styled(Link)`
+//   display: inline-block;
+//   width: 328px;
+//   height: 80px;
+//   border-bottom: none;
+//   background: url(${LogoImage});
+//   background-size: 100% 100%;
+//   background-repeat: no-repeat;
+//   text-indent: -9999px;
+//   z-index: 3;
+// `
+var LowFooter = exports.LowFooter = _styledComponents2.default.footer(_templateObject2);
 
-var LeftSide = exports.LeftSide = _styledComponents2.default.div(_templateObject4);
-var RightSide = exports.RightSide = _styledComponents2.default.div(_templateObject5);
-var Copyright = exports.Copyright = _styledComponents2.default.p(_templateObject6);
-var Contact = exports.Contact = _styledComponents2.default.p(_templateObject7);
-var StyledLink = exports.StyledLink = (0, _styledComponents2.default)(_gatsbyLink2.default)(_templateObject8);
-var Styleda = _styledComponents2.default.a(_templateObject8);
-var Styledo = (0, _styledComponents2.default)(_reactObfuscate2.default)(_templateObject8);
+var LeftSide = exports.LeftSide = _styledComponents2.default.div(_templateObject3);
+var RightSide = exports.RightSide = _styledComponents2.default.div(_templateObject4);
+var Copyright = exports.Copyright = _styledComponents2.default.p(_templateObject5);
+var Contact = exports.Contact = _styledComponents2.default.p(_templateObject6);
+var StyledLink = exports.StyledLink = (0, _styledComponents2.default)(_gatsbyLink2.default)(_templateObject7);
+var Styleda = _styledComponents2.default.a(_templateObject7);
+var Styledo = (0, _styledComponents2.default)(_reactObfuscate2.default)(_templateObject7);
