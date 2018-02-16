@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 const PageTitle = props => (
   <div>
     <Helmet
-      title={`${props.name || ''} | ALAIR`}
+      title={`${props.name || ''}`}
       meta={[
         {
           name: 'description',
