@@ -3,7 +3,6 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Main = undefined;
 
 var _templateObject = _taggedTemplateLiteral(['\n  margin: ', ';\n  max-width: ', ';\n  min-height: ', ';\n  padding: ', ';\n'], ['\n  margin: ', ';\n  max-width: ', ';\n  min-height: ', ';\n  padding: ', ';\n']);
 
@@ -19,7 +18,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var Main = exports.Main = _styledComponents2.default.main.attrs({
+var Main = _styledComponents2.default.main.attrs({
   margin: function margin(props) {
     return props.margin || '1em auto 1em auto';
   },
@@ -41,3 +40,4 @@ var Main = exports.Main = _styledComponents2.default.main.attrs({
 }, function (props) {
   return props.padding;
 });
+exports.default = Main;
