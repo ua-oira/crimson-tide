@@ -36,4 +36,4 @@ const PageTitle = props => (
 export default PageTitle
 
 // EXAMPLE:
-// <Title description="" keywords="" name="Contact" keywords="foo, bar, baz" />
+// <PageTitle description="" keywords="" name="Contact" keywords="foo, bar, baz" />
