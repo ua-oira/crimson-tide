@@ -44,4 +44,4 @@ var PageTitle = function PageTitle(props) {
 exports.default = PageTitle;
 
 // EXAMPLE:
-// <Title description="" keywords="" name="Contact" keywords="foo, bar, baz" />
+// <PageTitle description="" keywords="" name="Contact" keywords="foo, bar, baz" />
