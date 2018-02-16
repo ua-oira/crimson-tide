@@ -1,6 +1,6 @@
 {
   "name": "crimson-tide",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Reusable React components for The University of Alabama 🐘",
   "main": "dist/index.js",
   "author": "Coston Perkins <coston.perkins@ua.edu> (https://coston.io)",
@@ -22,7 +22,7 @@
     "watch": "babel -w -d dist src",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
     "test": "no tests yet!",
-    "preversion": "npm run clean && npm run format && npm run build",
+    "preversion": "npm install && npm run clean && npm run format && npm run build",
     "postpublish": "git push && git push --tag"
   },
   "devDependencies": {

@@ -1,10 +1,19 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Main = styled.main`
-  margin: 1em auto 1em auto;
-  max-width: 960px;
-  min-height: 500px;
-  padding: 0px 1.0875rem 1.45rem;
-`
+const Main = props => (
+  <main>
+    <div
+      style={{
+        margin: ` 1em auto 1em auto`,
+        maxWidth: 960,
+        minHeight: 500,
+        padding: '0px 1.0875rem 1.45rem',
+        paddingTop: 0,
+      }}
+    >
+      {props.children}
+    </div>
+  </main>
+)
 export default Main
