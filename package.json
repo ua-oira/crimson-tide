@@ -25,12 +25,14 @@
     "preversion": "npm install && npm run clean && npm run format && npm run build",
     "postpublish": "git push && git push --tag",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls"
   },
   "jest": {
     "setupFiles": [
       "./test/jestsetup.js"
     ],
+    "collectCoverage": true,
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
     ],
@@ -46,6 +48,7 @@
     "babel-preset-react": "^6.24.1",
     "chai": "^4.1.2",
     "core-js": "^2.5.3",
+    "coveralls": "^3.0.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "enzyme-to-json": "^3.3.1",
