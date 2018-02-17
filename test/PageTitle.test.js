@@ -2,12 +2,18 @@ import React from 'react'
 import PageTitle from '../src/PageTitle'
 import Helmet from 'react-helmet'
 
-test('render a document title', () => {
-  const wrapper = shallow(
-    <PageTitle name="Wow" />
-  );
-  console.log(wrapper.find(Helmet))
-  // expect(wrapper.find(Helmet)).to.have.length(1);
-  expect(wrapper.find(Helmet).prop('title')).toEqual('Wow')
-});
+describe('PageTitle', () => {
+  
+  test('renders the document title via Helmet', () => {
+    const wrapper = shallow(
+      <PageTitle name="Amazing Page" />
+    );
+    console.log(wrapper.find(Helmet))
+    expect(wrapper.find(Helmet).length).toBe(1);
+    expect(wrapper.find(Helmet).prop('title')).toEqual('Amazing Page')
+  });
+
+})
+
+
 
