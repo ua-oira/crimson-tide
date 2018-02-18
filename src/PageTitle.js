@@ -11,7 +11,7 @@ const PageTitle = props => (
       <meta property="og:image" content={props.image} />
       <meta property="og:description" content={props.description} />
     </Helmet>
-    {props.noHeader ? null : (
+    {!props.noHeader && (
       <div>
         <h1>{props.name}</h1>
         <hr />
