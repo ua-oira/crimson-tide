@@ -3,32 +3,19 @@ import Helmet from 'react-helmet'
 
 const PageTitle = props => (
   <div>
-    <Helmet
-      title={`${props.name || ''}`}
-      meta={[
-        {
-          name: 'description',
-          content:
-            props.description ||
-            `${
-              props.name
-            } at the Office of Institutional Research and Assessment of The University of Alabama`,
-        },
-        {
-          name: 'keywords',
-          content:
-            props.keywords ||
-            `${
-              props.keywords
-            }, OIRA, The University of Alabama, AIR, SAIR, ALAIR`,
-        },
-      ]}
-    />
+    <Helmet>
+      <title>{`${props.name} ${props.site ? ` | ${props.site}` : ''}`}</title>
+      <meta name="description" content={props.description} />
+      <meta name="keywords" content={props.keywords} />
+      <meta property="og:title" content={props.name} />
+      <meta property="og:image" content={props.image} />
+      <meta property="og:description" content={props.description} />
+    </Helmet>
     {props.noHeader ? null : (
-      <header>
+      <div>
         <h1>{props.name}</h1>
         <hr />
-      </header>
+      </div>
     )}
   </div>
 )
@@ -36,4 +23,14 @@ const PageTitle = props => (
 export default PageTitle
 
 // EXAMPLE:
-// <PageTitle description="" keywords="" name="Contact" keywords="foo, bar, baz" />
+{
+  /* 
+  <PageTitle 
+    name="Contact"
+    description="foo"
+    keywords="bar"
+    image="baz"
+    site="OIRA"
+  /> 
+*/
+}
