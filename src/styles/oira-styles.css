@@ -450,9 +450,9 @@ table {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
-  font-size: 1rem;
-  line-height: 1.45rem;
+  margin-bottom: 1.45em;
+  font-size: 1em;
+  line-height: 1.45em;
   border-collapse: collapse;
   width: 100%;
 }
