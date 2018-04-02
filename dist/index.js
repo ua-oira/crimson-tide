@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.OiraStyles = exports.ChimeIn = exports.SmFooter = exports.Main = exports.PageTitle = exports.Nav = undefined;
+exports.Tab = exports.Tabs = exports.OiraStyles = exports.ChimeIn = exports.SmFooter = exports.Main = exports.PageTitle = exports.Nav = undefined;
 
 var _react = require('react');
 
@@ -41,3 +41,5 @@ exports.Main = _Main2.default;
 exports.SmFooter = _SmFooter2.default;
 exports.ChimeIn = _chimeIn2.default;
 exports.OiraStyles = _oiraStyles2.default;
+exports.Tabs = _oiraStyles.Tabs;
+exports.Tab = _oiraStyles.Tab;

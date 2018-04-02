@@ -18,18 +18,22 @@ var PageTitle = function PageTitle(props) {
   return _react2.default.createElement(
     'div',
     null,
-    _react2.default.createElement(_reactHelmet2.default, {
-      title: '' + (props.name || ''),
-      meta: [{
-        name: 'description',
-        content: props.description || props.name + ' at the Office of Institutional Research and Assessment of The University of Alabama'
-      }, {
-        name: 'keywords',
-        content: props.keywords || props.keywords + ', OIRA, The University of Alabama, AIR, SAIR, ALAIR'
-      }]
-    }),
-    props.noHeader ? null : _react2.default.createElement(
-      'header',
+    _react2.default.createElement(
+      _reactHelmet2.default,
+      null,
+      _react2.default.createElement(
+        'title',
+        null,
+        props.name + ' ' + (props.site ? ' | ' + props.site : '')
+      ),
+      _react2.default.createElement('meta', { name: 'description', content: props.description }),
+      _react2.default.createElement('meta', { name: 'keywords', content: props.keywords }),
+      _react2.default.createElement('meta', { property: 'og:title', content: props.name }),
+      _react2.default.createElement('meta', { property: 'og:image', content: props.image }),
+      _react2.default.createElement('meta', { property: 'og:description', content: props.description })
+    ),
+    !props.noHeader && _react2.default.createElement(
+      'div',
       null,
       _react2.default.createElement(
         'h1',
@@ -44,4 +48,15 @@ var PageTitle = function PageTitle(props) {
 exports.default = PageTitle;
 
 // EXAMPLE:
-// <PageTitle description="" keywords="" name="Contact" keywords="foo, bar, baz" />
+
+{
+  /* 
+  <PageTitle 
+    name="Contact"
+    description="foo"
+    keywords="bar"
+    image="baz"
+    site="OIRA"
+  /> 
+  */
+}
