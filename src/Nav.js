@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {propTypes} from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 import { array, string } from 'prop-types'
@@ -10,18 +10,13 @@ const Nav = props => (
         <Logo img={props.image} to="/" title="Home" />
       </Left>
       <Right>
-        {props.links.map((link, i) => (
-          <StyledLink key={i} to={link.path}>
-            {link.title}
-          </StyledLink>
-        ))}
+        {props.children}
       </Right>
     </Content>
   </FullWidthHeader>
 )
 
 Nav.propTypes = {
-  links: array,
   img: string,
 }
 
@@ -31,7 +26,7 @@ const FullWidthHeader = styled.header`
   background: #900;
   color: black;
 `
-const Logo = styled(Link)`
+const Logo = styled.a`
   display: inline-block;
   margin: 1em 0;
   width: 200px;
@@ -81,33 +76,5 @@ const Right = styled.div`
   }
   @media print {
     display: none;
-  }
-`
-const StyledLink = styled(Link)`
-  color: white !important;
-  font-size: 16px;
-  font-weight: 500;
-  padding: 42px 14px;
-  text-decoration: none;
-  line-height: 20px;
-  &:hover {
-    color: #900 !important;
-    background: #fff;
-    transition: all 0.2s ease-in-out;
-  }
-  &:active,
-  visited {
-    font-weight: bold;
-    text-decoration: none !important;
-    color: #fff !important;
-  }
-  @media (max-width: 768px) {
-    line-height: 1.5em;
-    &:hover {
-      color: #fff !important;
-      background: none;
-      transition: all 0.2s ease-in-out;
-      text-decoration: none;
-    }
   }
 `
