@@ -39,18 +39,20 @@ var Nav = function Nav(props) {
       _react2.default.createElement(
         Left,
         null,
-        _react2.default.createElement(Logo, { img: props.image, to: '/', title: 'Home' })
+        props.gatsbyLogo && _react2.default.createElement(GatsbyLogo, { img: props.image, to: '/', title: 'Home' }),
+        props.Logo && _react2.default.createElement(Logo, { img: props.image, href: '/', title: 'Home' })
       ),
       _react2.default.createElement(
         Right,
         null,
-        props.links.map(function (link, i) {
+        props.links && props.links.map(function (link, i) {
           return _react2.default.createElement(
             StyledLink,
             { key: i, to: link.path },
             link.title
           );
-        })
+        }),
+        props.children
       )
     )
   );
@@ -64,8 +66,22 @@ Nav.propTypes = {
 exports.default = Nav;
 
 
+{
+  /* USAGE✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨
+   import { Nav, ChimeIn } from 'crimson-tide'
+   const NavLinks = [
+    { title: 'Planning Group', path: '/planning-group' },
+    { title: 'Steering Committee', path: '/steering-committee' }
+  ]
+  <Nav image={ChimeIn} links={NavLinks} />
+   ✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨ */
+}
+
 var FullWidthHeader = _styledComponents2.default.header(_templateObject);
-var Logo = (0, _styledComponents2.default)(_gatsbyLink2.default)(_templateObject2, function (props) {
+var Logo = _styledComponents2.default.a(_templateObject2, function (props) {
+  return props.img;
+});
+var GatsbyLogo = (0, _styledComponents2.default)(_gatsbyLink2.default)(_templateObject2, function (props) {
   return props.img;
 });
 var Content = _styledComponents2.default.div(_templateObject3);
