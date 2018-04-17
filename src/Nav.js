@@ -1,4 +1,4 @@
-import React, {propTypes} from 'react'
+import React, { propTypes } from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 import { array, string } from 'prop-types'
@@ -7,9 +7,18 @@ const Nav = props => (
   <FullWidthHeader>
     <Content>
       <Left>
-        <Logo img={props.image} to="/" title="Home" />
+        {props.gatsbyLogo && (
+          <GatsbyLogo img={props.image} to="/" title="Home" />
+        )}
+        {props.Logo && <Logo img={props.image} href="/" title="Home" />}
       </Left>
       <Right>
+        {props.links &&
+          props.links.map((link, i) => (
+            <StyledLink key={i} to={link.path}>
+              {link.title}
+            </StyledLink>
+          ))}
         {props.children}
       </Right>
     </Content>
@@ -17,16 +26,48 @@ const Nav = props => (
 )
 
 Nav.propTypes = {
+  links: array,
   img: string,
 }
 
 export default Nav
+
+{
+  /* USAGE✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨
+
+  import { Nav, ChimeIn } from 'crimson-tide'
+
+  const NavLinks = [
+    { title: 'Planning Group', path: '/planning-group' },
+    { title: 'Steering Committee', path: '/steering-committee' }
+  ]
+  <Nav image={ChimeIn} links={NavLinks} />
+
+  ✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨ */
+}
 
 const FullWidthHeader = styled.header`
   background: #900;
   color: black;
 `
 const Logo = styled.a`
+  display: inline-block;
+  margin: 1em 0;
+  width: 200px;
+  height: 70px;
+  border-bottom: none;
+  background: url(${props => props.img});
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+  z-index: 3;
+  @media print {
+    * {
+      -webkit-print-color-adjust: exact;
+    }
+  }
+`
+const GatsbyLogo = styled(Link)`
   display: inline-block;
   margin: 1em 0;
   width: 200px;
@@ -76,5 +117,33 @@ const Right = styled.div`
   }
   @media print {
     display: none;
+  }
+`
+const StyledLink = styled(Link)`
+  color: white !important;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 42px 14px;
+  text-decoration: none;
+  line-height: 20px;
+  &:hover {
+    color: #900 !important;
+    background: #fff;
+    transition: all 0.2s ease-in-out;
+  }
+  &:active,
+  visited {
+    font-weight: bold;
+    text-decoration: none !important;
+    color: #fff !important;
+  }
+  @media (max-width: 768px) {
+    line-height: 1.5em;
+    &:hover {
+      color: #fff !important;
+      background: none;
+      transition: all 0.2s ease-in-out;
+      text-decoration: none;
+    }
   }
 `
