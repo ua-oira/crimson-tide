@@ -9,3 +9,31 @@
 Reusable React components for The University of Alabama 🐘
 
 Work in progress
+
+
+## install
+~~~bash
+npm i crimson-tide
+~~~
+
+## Usage
+~~~jsx
+import { Nav, Main, SmFooter, ChimeIn, OiraStyles } from 'crimson-tide'
+
+const NavLinks = [
+  { title: 'Planning Group', path: '/planning-group' },
+  { title: 'Steering Committee', path: '/steering-committee' },
+  { title: 'FAQ', path: '/faq' },
+  { title: 'Resources', path: '/resources' },
+]
+
+const TemplateWrapper = ({ children }) => (
+  <div className="react-root">
+    <Nav image={ChimeIn} links={NavLinks} />
+      <Main>{children}</Main>
+    <SmFooter />
+  </div>
+)
+
+export default TemplateWrapper
+~~~
