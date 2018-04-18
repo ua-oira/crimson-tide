@@ -33,6 +33,8 @@ var _oiraStyles = require('./styles/oira-styles.css');
 
 var _oiraStyles2 = _interopRequireDefault(_oiraStyles);
 
+var _Tabs = require('./Tabs.js');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.Nav = _Nav2.default;
@@ -41,5 +43,5 @@ exports.Main = _Main2.default;
 exports.SmFooter = _SmFooter2.default;
 exports.ChimeIn = _chimeIn2.default;
 exports.OiraStyles = _oiraStyles2.default;
-exports.Tabs = _oiraStyles.Tabs;
-exports.Tab = _oiraStyles.Tab;
+exports.Tabs = _Tabs.Tabs;
+exports.Tab = _Tabs.Tab;

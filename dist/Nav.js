@@ -39,8 +39,7 @@ var Nav = function Nav(props) {
       _react2.default.createElement(
         Left,
         null,
-        props.gatsbyLogo && _react2.default.createElement(GatsbyLogo, { img: props.image, to: '/', title: 'Home' }),
-        props.Logo && _react2.default.createElement(Logo, { img: props.image, href: '/', title: 'Home' })
+        _react2.default.createElement(Logo, { img: props.image, href: '/', title: 'Home' })
       ),
       _react2.default.createElement(
         Right,
