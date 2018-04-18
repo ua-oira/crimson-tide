@@ -32,10 +32,15 @@ const NavLinks = [
 const TemplateWrapper = ({ children }) => (
   <div className="react-root">
     <Nav image={ChimeIn} links={NavLinks} />
-      <Main>{children}</Main>
+    <Main>{children()}</Main>
     <SmFooter />
   </div>
 )
 
+TemplateWrapper.propTypes = {
+  children: PropTypes.func,
+}
+
 export default TemplateWrapper
+
 ~~~
