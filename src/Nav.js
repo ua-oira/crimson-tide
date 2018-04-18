@@ -16,7 +16,6 @@ const Nav = props => (
               {link.title}
             </StyledLink>
           ))}
-        {props.children}
       </Right>
     </Content>
   </FullWidthHeader>
