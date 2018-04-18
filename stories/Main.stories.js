@@ -6,11 +6,18 @@ import { linkTo } from '@storybook/addon-links'
 import { Main } from '../src/index'
 import { withInfo } from '@storybook/addon-info'
 
-storiesOf('Main', module).add(
-  'Default',
+storiesOf('Main Wrapper', module).add(
+  'Main',
   withInfo(`
       Main content wrapper.
-      #### Default Styles
+      ### Usage
+      ~~~js
+        import { Main } from 'crimson-tide'
+
+        <Main>{children}</Main>
+      ~~~
+
+      ### Built In Styles
       ~~~js
         margin:  '1em auto 1em auto',
         maxWidth: 960,
@@ -21,8 +28,10 @@ storiesOf('Main', module).add(
     
     `)(() => (
     <Main>
-      <h1>Wow</h1>
-      <p>This is soooo great.</p>
+      <h1>A Wrapper</h1>
+      <p>It contains {'<main>'} tags for really good markup.</p>
+      <p>The content inside the {'<main>'} element should be unique to the document. It should not contain any content that is repeated across documents such as sidebars, navigation links, copyright information, site logos, and search forms.</p>
+      <p>Note: There must not be more than one {'<main>'} element in a document. The {'<main>'} element must NOT be a descendant of an {'<article>'}, {'<aside>'}, {'<footer>'}, {'<header>'}, or {'<nav>'} element.</p>
     </Main>
   ))
 )
