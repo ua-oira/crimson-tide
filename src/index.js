@@ -5,6 +5,6 @@ import Main from './Main.js'
 import SmFooter from './SmFooter.js'
 import ChimeIn from './logos/chime-in.svg'
 import OiraStyles from './styles/oira-styles.css'
-import { Tabs, Tab } from './styles/oira-styles.css'
+import { Tabs, Tab } from './Tabs.js'
 
 export { Nav, PageTitle, Main, SmFooter, ChimeIn, OiraStyles, Tabs, Tab }
