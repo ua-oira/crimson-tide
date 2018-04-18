@@ -4,15 +4,19 @@ import styled from 'styled-components'
 import { array, string } from 'prop-types'
 
 const Nav = props => (
-  <FullWidthHeader>
+  <FullWidthHeader background={props.background}>
     <Content>
       <Left>
-        <Logo img={props.image} href="/" title="Home" />
+        <Logo img={props.image} to="/" title="Home" />
       </Left>
       <Right>
         {props.links &&
           props.links.map((link, i) => (
-            <StyledLink key={i} to={link.path}>
+            <StyledLink
+              hoveredTextColor={props.background}
+              key={i}
+              to={link.path}
+            >
               {link.title}
             </StyledLink>
           ))}
@@ -24,6 +28,11 @@ const Nav = props => (
 Nav.propTypes = {
   links: array,
   img: string,
+  background: string,
+}
+
+Nav.defaultProps = {
+  background: '#990000',
 }
 
 export default Nav
@@ -43,27 +52,10 @@ export default Nav
 }
 
 const FullWidthHeader = styled.header`
-  background: #900;
+  background: ${props => props.background};
   color: black;
 `
-const Logo = styled.a`
-  display: inline-block;
-  margin: 1em 0;
-  width: 200px;
-  height: 70px;
-  border-bottom: none;
-  background: url(${props => props.img});
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  text-indent: -9999px;
-  z-index: 3;
-  @media print {
-    * {
-      -webkit-print-color-adjust: exact;
-    }
-  }
-`
-const GatsbyLogo = styled(Link)`
+const Logo = styled(Link)`
   display: inline-block;
   margin: 1em 0;
   width: 200px;
@@ -123,7 +115,7 @@ const StyledLink = styled(Link)`
   text-decoration: none;
   line-height: 20px;
   &:hover {
-    color: #900 !important;
+    color: ${props => props.hoveredTextColor} !important;
     background: #fff;
     transition: all 0.2s ease-in-out;
   }
