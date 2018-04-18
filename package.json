@@ -1,6 +1,6 @@
 {
   "name": "crimson-tide",
-  "version": "0.0.24",
+  "version": "0.1.0",
   "description": "Reusable React components for The University of Alabama 🐘",
   "main": "dist/index.js",
   "author": "Coston Perkins <coston.perkins@ua.edu> (https://coston.io)",
@@ -12,7 +12,7 @@
   "bugs": {
     "url": "https://github.com/ua-oira/crimson-tide/issues"
   },
-  "license": "MIT",
+  "license": "GNU GENERAL PUBLIC LICENSE",
   "engines": {
     "node": ">= 0.10.0"
   },
