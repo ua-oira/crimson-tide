@@ -15,13 +15,14 @@ const NavLinks = [
   { title: 'Resources', path: '/resources' },
 ]
 
-
 storiesOf('Navigation', module)
-.addDecorator(StoryRouter())
-.add(
-  'Nav',
-  withInfo(`
-      Red Nav
+  .addDecorator(StoryRouter())
+  .add(
+    'Nav',
+    withInfo(`
+      - A basic navbar. 
+      - Great for quick site spin-up. 
+      - Add nav links via array of objects to the links attribute.
       
       ## Usage
       
@@ -38,5 +39,7 @@ storiesOf('Navigation', module)
       <Nav image={ChimeIn} links={NavLinks} />
       ~~~
     
-    `)(() => <Nav image={ChimeIn} links={NavLinks} />)
-)
+    `)(() => (
+      <Nav background="rebeccapurple" image={ChimeIn} links={NavLinks} />
+    ))
+  )
