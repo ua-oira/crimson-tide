@@ -16,10 +16,10 @@ const NavLinks = [
 ]
 
 
-storiesOf('Nav', module)
+storiesOf('Navigation', module)
 .addDecorator(StoryRouter())
 .add(
-  'Default',
+  'Nav',
   withInfo(`
       Red Nav
       

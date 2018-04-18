@@ -8,10 +8,11 @@ import { withInfo } from '@storybook/addon-info'
 
 
 
-storiesOf('SmFooter', module).add(
-  'Default',
+storiesOf('Footer', module).add(
+  'SmFooter',
   withInfo(`
       A minimal white footer. Links open new tabs or maps, or obfuscated contact methods (i.e. email.)
+      
       ~~~js
       <SmFooter />
       ~~~
