@@ -7,10 +7,7 @@ const Nav = props => (
   <FullWidthHeader>
     <Content>
       <Left>
-        {props.gatsbyLogo && (
-          <GatsbyLogo img={props.image} to="/" title="Home" />
-        )}
-        {props.Logo && <Logo img={props.image} href="/" title="Home" />}
+        <Logo img={props.image} href="/" title="Home" />
       </Left>
       <Right>
         {props.links &&
