@@ -30,25 +30,21 @@ export default class NavWithMenu extends React.Component {
     const closeMenu = this.close('menu')
 
     return (
-      <ColorWrapper>
+      <ColorWrapper background={this.props.background}>
         <Header>
-          <Logo to="/" onClick={closeMenu} />
+          <Logo img={this.props.image} to="/" onClick={closeMenu} />
           <Toggle onClick={this.toggle} active={menu} />
-          <Navigation role="navigation" style={{ top: menu ? 0 : '-100vh' }}>
-            {/* <NavigationLink to="/conference/" onClick={closeMenu}>
-              Conference
-            </NavigationLink> */}
-            <NavigationLink to="/resources" onClick={closeMenu}>
+          <Navigation
+            role="navigation"
+            style={{ top: menu ? 0 : '-100vh' }}
+            background={this.props.background}
+          >
+            <NavigationLink
+              hoveredTextColor={this.props.background}
+              to="/resources"
+              onClick={closeMenu}
+            >
               Resources
-            </NavigationLink>
-            <NavigationLink to="/forms" onClick={closeMenu}>
-              Forms/Links
-            </NavigationLink>
-            <NavigationLink to="/jobs" onClick={closeMenu}>
-              Jobs
-            </NavigationLink>
-            <NavigationLink to="/leadership" onClick={closeMenu}>
-              Leadership
             </NavigationLink>
           </Navigation>
         </Header>
@@ -60,12 +56,13 @@ export default class NavWithMenu extends React.Component {
 // NICELY PACKAGED
 
 const ColorWrapper = styled.nav`
-  background: linear-gradient(225deg, #07588a, #39cccc);
+  background: ${props => props.background};
 `
 const Header = styled.div`
   display: flex;
-  padding: 5px 32px;
-  max-width: 1000px;
+  padding: 0px 1.0875rem;
+  max-width: 960px;
+  justify-content: space-between;
   margin: 0 auto;
   justify-content: space-between;
   align-items: center;
@@ -76,13 +73,13 @@ const Navigation = styled.div`
     position: absolute;
     top: -100vh;
     left: 0;
-    background: linear-gradient(-225deg, #07588a, #39cccc);
+    background: ${props => props.background};
     width: 100%;
     height: 100vh;
     overflow-y: hidden;
     transition: all 0.3s ease;
     display: flex;
-    z-index: 1000;
+    z-index: 4000;
     flex-flow: column;
     justify-content: center;
     align-items: center;
@@ -92,16 +89,19 @@ const Navigation = styled.div`
 // HAS DEPENDENCIES
 const Logo = styled(Link)`
   display: inline-block;
-  width: 228px;
-  height: 80px;
-  background: url(${LogoImage});
+  margin: 1em 0;
+  width: 200px;
+  height: 70px;
+  border-bottom: none;
+  background: url(${props => props.img});
   background-size: 100% 100%;
   background-repeat: no-repeat;
   text-indent: -9999px;
-  z-index: 3;
-  @media (max-width: 800px) {
-    width: 152px;
-    height: 60px;
+  z-index: 3000;
+  @media print {
+    * {
+      -webkit-print-color-adjust: exact;
+    }
   }
 `
 
@@ -109,7 +109,7 @@ const Arrow = styled.div`
   display: none;
   width: 25px;
   height: 25px;
-  z-index: 3000;
+  z-index: 5000;
   background: url(${MenuIcon});
   background-repeat: no-repeat;
   @media (max-width: 800px) {
@@ -124,39 +124,33 @@ const Toggle = ({ onClick, active }) => (
   />
 )
 
-const StyledLink = styled(Link)`
-  color: #dd1d64;
+const NavigationLink = styled(Link)`
+  color: white !important;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 100% 14px;
   text-decoration: none;
   &:hover {
-    text-decoration: underline;
+    color: #2196f3 !important;
+    background: #fff;
+    transition: all 0.2s ease-in-out;
   }
-`
-const NavigationLink = styled(StyledLink)`
-  padding-bottom: 5px;
-  color: white !important;
-  margin-right: 40px;
-  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-  text-decoration: none;
-  border-bottom: solid 4px rgba(255, 255, 255, 0);
-  transition: all 175ms cubic-bezier(0.65, 0.05, 0.36, 1);
-  &:hover,
-  &:focus,
-  &:active {
-    text-decoration: none;
-    padding-bottom: 4px;
-    border-bottom: 4px solid white;
-    cursor: pointer;
-    &:after {
-      width: 100%;
-    }
-  }
-  &:last-child {
-    margin-right: 0px;
+  &:active,
+  visited {
+    font-weight: bold;
+    text-decoration: none !important;
+    color: #fff !important;
   }
   @media (max-width: 800px) {
     margin-right: 0px;
     margin-bottom: 1em;
     font-size: 10vw;
     line-height: 30px;
+    &:hover {
+      color: ${props => props.hoveredTextColor} !important;
+      background: none;
+      transition: all 0.2s ease-in-out;
+      text-decoration: none;
+    }
   }
 `

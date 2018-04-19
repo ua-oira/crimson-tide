@@ -6,7 +6,7 @@ import { linkTo } from '@storybook/addon-links'
 import { withInfo } from '@storybook/addon-info'
 import StoryRouter from 'storybook-react-router'
 
-import { NavWithMenu } from '../../src/index'
+import { NavWithMenu, ALAIR } from '../../src/index'
 
 const NavLinks = [
   { title: 'Planning Group', path: '/planning-group' },
@@ -26,7 +26,7 @@ storiesOf('Navigation', module)
       ~~~
     
     `)(() => (
-      <NavWithMenu/>
+      <NavWithMenu image={ALAIR} background="linear-gradient(to right, #2196f3, #f44336)"/>
     ))
   )
 
