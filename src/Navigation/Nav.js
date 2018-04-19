@@ -1,7 +1,9 @@
 import React, { propTypes } from 'react'
-import Link from 'gatsby-link'
 import styled from 'styled-components'
 import { array, string } from 'prop-types'
+
+import Link from '../Link'
+
 
 const Nav = props => (
   <FullWidthHeader background={props.background}>

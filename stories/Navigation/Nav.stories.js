@@ -6,7 +6,7 @@ import { linkTo } from '@storybook/addon-links'
 import { withInfo } from '@storybook/addon-info'
 import StoryRouter from 'storybook-react-router'
 
-import { Nav, ChimeIn } from '../src/index'
+import { Nav, ChimeIn } from '../../src/index'
 
 const NavLinks = [
   { title: 'Planning Group', path: '/planning-group' },
@@ -43,3 +43,5 @@ storiesOf('Navigation', module)
       <Nav background="rebeccapurple" image={ChimeIn} links={NavLinks} />
     ))
   )
+
+  
