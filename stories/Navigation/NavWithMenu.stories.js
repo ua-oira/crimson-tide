@@ -20,27 +20,13 @@ storiesOf('Navigation', module)
   .add(
     'NavWithMenu',
     withInfo(`
-      - A basic navbar. 
-      - Great for quick site spin-up. 
-      - Add nav links via array of objects to the links attribute.
-      
-      ## Usage
       
       ~~~js
-      import { Nav, ChimeIn } from 'crimson-tide'
-
-      const NavLinks = [
-        { title: 'Planning Group', path: '/planning-group' },
-        { title: 'Steering Committee', path: '/steering-committee' },
-        { title: 'FAQ', path: '/faq' },
-        { title: 'Resources', path: '/resources' },
-      ]
-
-      <Nav image={ChimeIn} links={NavLinks} />
+      
       ~~~
     
     `)(() => (
-      <NavWithMenu />
+      <NavWithMenu/>
     ))
   )
 

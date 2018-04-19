@@ -5,74 +5,35 @@ import Link from '../Link.js'
 import LogoImage from '../logos/alair-logo.svg'
 import MenuIcon from './menu-arrow.svg'
 
-export default class NavBar extends React.Component {
+export default class NavWithMenu extends React.Component {
   constructor(props) {
     super(props)
-    const undef = typeof window !== 'undefined'
     this.state = {
       menu: false,
-      transcript: undef ? !(window.innerWidth < 800) : false,
-      toc: true,
-      width: undef ? window.innerWidth : null,
     }
   }
 
-  componentDidMount() {
-    window.addEventListener('resize', this.handleResize)
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.handleResize)
-  }
-
-  handleResize = () => {
-    if (this.onMobile()) {
-      const { transcript, toc } = this.state
-      if (!transcript || !toc) {
-        this.setState({
-          transcript: true,
-          toc: true,
-        })
-      }
-    }
-  }
-
-  onMobile = () => window.innerWidth <= 800
-
-  toggle = item => () => {
+  toggle = () => {
     this.setState(prevState => ({
-      [item]: !prevState[item],
+      menu: !prevState.menu,
     }))
   }
 
   close = item => () => {
-    if (this.onMobile()) {
-      this.setState({
-        [item]: false,
-      })
-    }
+    this.setState({
+      menu: false,
+    })
   }
 
   render() {
-    const { menu, transcript, toc } = this.state
+    const { menu } = this.state
     const closeMenu = this.close('menu')
-
-    const children = React.Children.map(this.props.children, child =>
-      React.cloneElement(child, {
-        transcript,
-        toc,
-        toggle: this.toggle,
-        close: this.close,
-      })
-    )
 
     return (
       <ColorWrapper>
         <Header>
-          <Logo to="/" onClick={closeMenu}>
-            Alair
-          </Logo>
-          <Toggle onClick={this.toggle('menu')} active={menu} />
+          <Logo to="/" onClick={closeMenu} />
+          <Toggle onClick={this.toggle} active={menu} />
           <Navigation role="navigation" style={{ top: menu ? 0 : '-100vh' }}>
             {/* <NavigationLink to="/conference/" onClick={closeMenu}>
               Conference
