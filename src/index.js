@@ -1,5 +1,7 @@
 import React from 'react'
-import Nav from './Nav.js'
+import Nav from './Navigation/Nav.js'
+import TightNav from './Navigation/TightNav.js'
+import NavWithMenu from './Navigation/NavWithMenu.js'
 import PageTitle from './PageTitle.js'
 import Main from './Main.js'
 import SmFooter from './SmFooter.js'
@@ -8,9 +10,11 @@ import GDGD from './logos/gdgd.svg'
 import OIRALogo from './logos/oira-logo.svg'
 import OiraStyles from './styles/oira-styles.css'
 import { Tabs, Tab } from './Tabs.js'
+import Link from './Link.js'
 
 export {
   Nav,
+  TightNav,
   PageTitle,
   Main,
   SmFooter,
@@ -20,4 +24,6 @@ export {
   OiraStyles,
   Tabs,
   Tab,
+  Link,
+  NavWithMenu
 }
