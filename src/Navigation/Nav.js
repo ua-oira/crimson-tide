@@ -1,65 +1,89 @@
-import React, { propTypes } from 'react'
+import React from 'react'
 import styled from 'styled-components'
-import { array, string } from 'prop-types'
+import Headroom from 'react-headroom'
+import NavLink from './NavLink'
+import Link from '../Link.js'
+import LogoImage from '../logos/alair-logo.svg'
+import MenuIcon from './menu-arrow.svg'
 
-import Link from '../Link'
+export default class NavWithMenu extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      menu: false,
+    }
+  }
 
+  toggle = () => {
+    this.setState(prevState => ({
+      menu: !prevState.menu,
+    }))
+  }
 
-const Nav = props => (
-  <FullWidthHeader background={props.background}>
-    <Content>
-      <Left>
-        <Logo img={props.image} to="/" title="Home" />
-      </Left>
-      <Right>
-        {props.links &&
-          props.links.map((link, i) => (
-            <StyledLink
-              hoveredTextColor={props.background}
-              key={i}
-              to={link.path}
-            >
-              {link.title}
-            </StyledLink>
-          ))}
-      </Right>
-    </Content>
-  </FullWidthHeader>
-)
+  close = item => () => {
+    this.setState({
+      menu: false,
+    })
+  }
 
-Nav.propTypes = {
-  links: array,
-  img: string,
-  background: string,
+  render() {
+    const { menu } = this.state
+    const closeMenu = this.close('menu')
+
+    return (
+      <ColorWrapper background={this.props.background}>
+        <Header>
+          <Logo img={this.props.image} to="/" onClick={closeMenu} />
+          <Toggle onClick={this.toggle} active={menu} />
+          <Navigation
+            role="navigation"
+            style={{ top: menu ? 0 : '-100vh' }}
+            background={this.props.background}
+          >
+            {this.props.children}
+          </Navigation>
+        </Header>
+      </ColorWrapper>
+    )
+  }
 }
 
-Nav.defaultProps = {
-  background: '#990000',
-}
-
-export default Nav
-
-{
-  /* USAGE✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨
-
-  import { Nav, ChimeIn } from 'crimson-tide'
-
-  const NavLinks = [
-    { title: 'Planning Group', path: '/planning-group' },
-    { title: 'Steering Committee', path: '/steering-committee' }
-  ]
-  <Nav image={ChimeIn} links={NavLinks} />
-
-  ✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨ */
-}
-
-const FullWidthHeader = styled.header`
+const ColorWrapper = styled.nav`
   background: ${props => props.background};
-  color: black;
+  overflow: hidden;
 `
+const Header = styled.div`
+  display: flex;
+  padding: 0px 1.0875rem;
+  max-width: 960px;
+  justify-content: space-between;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2000;
+`
+const Navigation = styled.div`
+  @media (max-width: 800px) {
+    position: absolute;
+    top: -100vh;
+    left: 0;
+    background: ${props => props.background};
+    width: 100%;
+    height: 100vh;
+    overflow-y: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    z-index: 4000;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+`
+
+// HAS DEPENDENCIES
 const Logo = styled(Link)`
   display: inline-block;
-  margin: 1em 0;
+  margin: 0.8em 0;
   width: 200px;
   height: 70px;
   border-bottom: none;
@@ -67,73 +91,29 @@ const Logo = styled(Link)`
   background-size: 100% 100%;
   background-repeat: no-repeat;
   text-indent: -9999px;
-  z-index: 3;
+  z-index: 3000;
   @media print {
     * {
       -webkit-print-color-adjust: exact;
     }
   }
 `
-const Content = styled.div`
-  font-size: 0.88em;
-  line-height: 0.88em;
-  display: flex;
-  color: black;
-  flex-flow: row wrap;
-  margin: 0 auto;
-  width: 100%;
-  padding: 0px 1.0875rem;
-  max-width: 960px;
-  justify-content: space-between;
-  align-items: center;
-  @media (max-width: 768px) {
-    flex-flow: column;
-  }
-  @media print {
-    flex-flow: row;
+
+const Arrow = styled.div`
+  display: none;
+  width: 25px;
+  height: 25px;
+  z-index: 5000;
+  background: url(${MenuIcon});
+  background-repeat: no-repeat;
+  @media (max-width: 800px) {
+    display: inline;
   }
 `
-const Left = styled.div`
-  float: left;
-  @media print {
-    -webkit-print-color-adjust: exact;
-  }
-`
-const Right = styled.div`
-  text-align: right;
-  float: Right;
-  @media (max-width: 768px) {
-    text-align: center;
-  }
-  @media print {
-    display: none;
-  }
-`
-const StyledLink = styled(Link)`
-  color: white !important;
-  font-size: 16px;
-  font-weight: 500;
-  padding: 42px 14px;
-  text-decoration: none;
-  line-height: 20px;
-  &:hover {
-    color: ${props => props.hoveredTextColor} !important;
-    background: #fff;
-    transition: all 0.2s ease-in-out;
-  }
-  &:active,
-  visited {
-    font-weight: bold;
-    text-decoration: none !important;
-    color: #fff !important;
-  }
-  @media (max-width: 768px) {
-    line-height: 1.5em;
-    &:hover {
-      color: #fff !important;
-      background: none;
-      transition: all 0.2s ease-in-out;
-      text-decoration: none;
-    }
-  }
-`
+
+const Toggle = ({ onClick, active }) => (
+  <Arrow
+    onClick={onClick}
+    style={{ transform: active ? 'rotate(45deg)' : 'rotate(0deg)' }}
+  />
+)
