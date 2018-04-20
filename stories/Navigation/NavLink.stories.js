@@ -6,7 +6,7 @@ import { linkTo } from '@storybook/addon-links'
 import { withInfo } from '@storybook/addon-info'
 import StoryRouter from 'storybook-react-router'
 
-import { NavWithMenu, ALAIR } from '../../src/index'
+import { NavLink } from '../../src/index'
 
 const NavLinks = [
   { title: 'Planning Group', path: '/planning-group' },
@@ -18,7 +18,7 @@ const NavLinks = [
 storiesOf('Navigation', module)
   .addDecorator(StoryRouter())
   .add(
-    'NavWithMenu',
+    'NavLink',
     withInfo(`
       
       ~~~js
@@ -26,8 +26,11 @@ storiesOf('Navigation', module)
       ~~~
     
     `)(() => (
-      <NavWithMenu image={ALAIR} background="linear-gradient(to right, #2196f3, #f44336)"/>
+      <NavLink
+        color='green'
+        to="/resources"
+      >
+        Resources
+      </NavLink>
     ))
   )
-
-  

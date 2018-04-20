@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Headroom from 'react-headroom'
+import NavLink from './NavLink'
 import Link from '../Link.js'
 import LogoImage from '../logos/alair-logo.svg'
 import MenuIcon from './menu-arrow.svg'
@@ -39,13 +40,13 @@ export default class NavWithMenu extends React.Component {
             style={{ top: menu ? 0 : '-100vh' }}
             background={this.props.background}
           >
-            <NavigationLink
-              hoveredTextColor={this.props.background}
+            <NavLink
+              hoveredLinkColor={this.props.linkColor || this.props.background}
               to="/resources"
               onClick={closeMenu}
             >
               Resources
-            </NavigationLink>
+            </NavLink>
           </Navigation>
         </Header>
       </ColorWrapper>
@@ -53,10 +54,9 @@ export default class NavWithMenu extends React.Component {
   }
 }
 
-// NICELY PACKAGED
-
 const ColorWrapper = styled.nav`
   background: ${props => props.background};
+  overflow: hidden;
 `
 const Header = styled.div`
   display: flex;
@@ -89,7 +89,7 @@ const Navigation = styled.div`
 // HAS DEPENDENCIES
 const Logo = styled(Link)`
   display: inline-block;
-  margin: 1em 0;
+  margin: 0.8em 0;
   width: 200px;
   height: 70px;
   border-bottom: none;
@@ -123,34 +123,3 @@ const Toggle = ({ onClick, active }) => (
     style={{ transform: active ? 'rotate(45deg)' : 'rotate(0deg)' }}
   />
 )
-
-const NavigationLink = styled(Link)`
-  color: white !important;
-  font-size: 16px;
-  font-weight: 500;
-  padding: 100% 14px;
-  text-decoration: none;
-  &:hover {
-    color: #2196f3 !important;
-    background: #fff;
-    transition: all 0.2s ease-in-out;
-  }
-  &:active,
-  visited {
-    font-weight: bold;
-    text-decoration: none !important;
-    color: #fff !important;
-  }
-  @media (max-width: 800px) {
-    margin-right: 0px;
-    margin-bottom: 1em;
-    font-size: 10vw;
-    line-height: 30px;
-    &:hover {
-      color: ${props => props.hoveredTextColor} !important;
-      background: none;
-      transition: all 0.2s ease-in-out;
-      text-decoration: none;
-    }
-  }
-`
