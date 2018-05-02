@@ -8,7 +8,7 @@ exports.StyledLink = exports.Contact = exports.Copyright = exports.RightSide = e
 var _templateObject = _taggedTemplateLiteral(['\n  position: relative;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  border-top: 1px solid #eee;\n  color: black;\n  padding-top: 0.5em;\n  @media print {\n    display: none;\n  }\n'], ['\n  position: relative;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  border-top: 1px solid #eee;\n  color: black;\n  padding-top: 0.5em;\n  @media print {\n    display: none;\n  }\n']),
     _templateObject2 = _taggedTemplateLiteral(['\n  font-size: 0.88em;\n  line-height: 0.88em;\n  display: flex;\n  color: black;\n  flex-flow: row wrap;\n  margin: 0 auto;\n  width: 100%;\n  padding: 20px 1.0875rem;\n  max-width: 960px;\n  justify-content: space-between;\n  align-items: center;\n  @media (max-width: 768px) {\n    flex-flow: column;\n  }\n'], ['\n  font-size: 0.88em;\n  line-height: 0.88em;\n  display: flex;\n  color: black;\n  flex-flow: row wrap;\n  margin: 0 auto;\n  width: 100%;\n  padding: 20px 1.0875rem;\n  max-width: 960px;\n  justify-content: space-between;\n  align-items: center;\n  @media (max-width: 768px) {\n    flex-flow: column;\n  }\n']),
     _templateObject3 = _taggedTemplateLiteral(['\n  float: left;\n'], ['\n  float: left;\n']),
-    _templateObject4 = _taggedTemplateLiteral(['\n  text-align: right;\n  float: Right;\n  @media (max-width: 768px) {\n    text-align: center;\n  }\n'], ['\n  text-align: right;\n  float: Right;\n  @media (max-width: 768px) {\n    text-align: center;\n  }\n']),
+    _templateObject4 = _taggedTemplateLiteral(['\n  text-align: right;\n  color: hsla(0, 0%, 0%, 0.2);\n  float: Right;\n  @media (max-width: 768px) {\n    text-align: center;\n  }\n'], ['\n  text-align: right;\n  color: hsla(0, 0%, 0%, 0.2);\n  float: Right;\n  @media (max-width: 768px) {\n    text-align: center;\n  }\n']),
     _templateObject5 = _taggedTemplateLiteral(['\n  border-bottom: none;\n  line-height: 19px;\n  margin-bottom: 6px;\n  justify: right;\n'], ['\n  border-bottom: none;\n  line-height: 19px;\n  margin-bottom: 6px;\n  justify: right;\n']),
     _templateObject6 = _taggedTemplateLiteral(['\n  font-size: 12px;\n  line-height: 12px;\n  font-family: \'Space Mono\', monospace;\n'], ['\n  font-size: 12px;\n  line-height: 12px;\n  font-family: \'Space Mono\', monospace;\n']),
     _templateObject7 = _taggedTemplateLiteral(['\n  color: black;\n  font-size: 1.1em;\n  text-decoration: none;\n  &:hover {\n    color: #990000;\n  }\n  &:active {\n    font-weight: bold;\n  }\n  @media (max-width: 768px) {\n    line-height: 1.5em;\n  }\n'], ['\n  color: black;\n  font-size: 1.1em;\n  text-decoration: none;\n  &:hover {\n    color: #990000;\n  }\n  &:active {\n    font-weight: bold;\n  }\n  @media (max-width: 768px) {\n    line-height: 1.5em;\n  }\n']);
@@ -83,17 +83,6 @@ var SmFooter = function SmFooter(props) {
 
 exports.default = SmFooter;
 var ColorWrapper = exports.ColorWrapper = _styledComponents2.default.div(_templateObject);
-// export const Logo = styled(Link)`
-//   display: inline-block;
-//   width: 328px;
-//   height: 80px;
-//   border-bottom: none;
-//   background: url(${LogoImage});
-//   background-size: 100% 100%;
-//   background-repeat: no-repeat;
-//   text-indent: -9999px;
-//   z-index: 3;
-// `
 var LowFooter = exports.LowFooter = _styledComponents2.default.footer(_templateObject2);
 
 var LeftSide = exports.LeftSide = _styledComponents2.default.div(_templateObject3);

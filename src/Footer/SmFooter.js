@@ -49,17 +49,6 @@ export const ColorWrapper = styled.div`
     display: none;
   }
 `
-// export const Logo = styled(Link)`
-//   display: inline-block;
-//   width: 328px;
-//   height: 80px;
-//   border-bottom: none;
-//   background: url(${LogoImage});
-//   background-size: 100% 100%;
-//   background-repeat: no-repeat;
-//   text-indent: -9999px;
-//   z-index: 3;
-// `
 export const LowFooter = styled.footer`
   font-size: 0.88em;
   line-height: 0.88em;
@@ -82,6 +71,7 @@ export const LeftSide = styled.div`
 `
 export const RightSide = styled.div`
   text-align: right;
+  color: hsla(0, 0%, 0%, 0.2);
   float: Right;
   @media (max-width: 768px) {
     text-align: center;
