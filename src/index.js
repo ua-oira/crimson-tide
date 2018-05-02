@@ -32,5 +32,5 @@ export {
   Tabs,
   Tab,
   Link,
-  NavWithMenu
+  NavWithMenu,
 }

@@ -20,7 +20,9 @@ class TightNav extends React.Component {
                 {' | '}
                 <StyledLink to="/reports/">{'Reports'}</StyledLink>
                 {' | '}
-                <StyledLink to="http://oira.ua.edu/factbook">{'Factbook'}</StyledLink>
+                <StyledLink to="http://oira.ua.edu/factbook">
+                  {'Factbook'}
+                </StyledLink>
                 {' | '}
                 <StyledLink to="/requests/">{'Requests'}</StyledLink>
                 {' | '}
