@@ -1,4 +1,3 @@
-import React from 'react'
 // Navigation
 import Nav from './Navigation/Nav.js'
 import LightNav from './Navigation/LightNav.js'
