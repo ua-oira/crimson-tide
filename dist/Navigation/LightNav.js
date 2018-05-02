@@ -11,8 +11,7 @@ var _templateObject = _taggedTemplateLiteral(['\n  border-bottom: 1px solid hsla
     _templateObject3 = _taggedTemplateLiteral(['\n  font-size: 0.88em;\n  line-height: 0.88em;\n  display: flex;\n  color: black;\n  flex-flow: row wrap;\n  margin: 0 auto;\n  width: 100%;\n  padding: 0 1.0875rem;\n  max-width: 960px;\n  justify-content: space-between;\n  align-items: center;\n  @media (max-width: 810px) {\n    flex-flow: column;\n  }\n  @media print {\n    flex-flow: row;\n  }\n'], ['\n  font-size: 0.88em;\n  line-height: 0.88em;\n  display: flex;\n  color: black;\n  flex-flow: row wrap;\n  margin: 0 auto;\n  width: 100%;\n  padding: 0 1.0875rem;\n  max-width: 960px;\n  justify-content: space-between;\n  align-items: center;\n  @media (max-width: 810px) {\n    flex-flow: column;\n  }\n  @media print {\n    flex-flow: row;\n  }\n']),
     _templateObject4 = _taggedTemplateLiteral(['\n  float: left;\n  @media print {\n    -webkit-print-color-adjust: exact;\n  }\n'], ['\n  float: left;\n  @media print {\n    -webkit-print-color-adjust: exact;\n  }\n']),
     _templateObject5 = _taggedTemplateLiteral(['\n  text-align: right;\n  color: hsla(0, 0%, 0%, 0.2);\n  cursor: default;\n  float: Right;\n  // padding-bottom: 1em;\n  @media (max-width: 810px) {\n    text-align: center;\n    margin-bottom: 1em;\n  }\n  @media print {\n    display: none;\n  }\n'], ['\n  text-align: right;\n  color: hsla(0, 0%, 0%, 0.2);\n  cursor: default;\n  float: Right;\n  // padding-bottom: 1em;\n  @media (max-width: 810px) {\n    text-align: center;\n    margin-bottom: 1em;\n  }\n  @media print {\n    display: none;\n  }\n']),
-    _templateObject6 = _taggedTemplateLiteral(['\n  font-size: 12px;\n  line-height: 12px;\n  font-family: \'Space Mono\', monospace;\n'], ['\n  font-size: 12px;\n  line-height: 12px;\n  font-family: \'Space Mono\', monospace;\n']),
-    _templateObject7 = _taggedTemplateLiteral(['\n  color: black;\n  font-size: 1.1em;\n  text-decoration: none;\n  &:hover {\n    color: #990000;\n  }\n  &:active {\n    font-weight: bold;\n  }\n  @media (max-width: 810px) {\n    line-height: 1.5em;\n  }\n'], ['\n  color: black;\n  font-size: 1.1em;\n  text-decoration: none;\n  &:hover {\n    color: #990000;\n  }\n  &:active {\n    font-weight: bold;\n  }\n  @media (max-width: 810px) {\n    line-height: 1.5em;\n  }\n']);
+    _templateObject6 = _taggedTemplateLiteral(['\n  font-size: 12px;\n  line-height: 12px;\n  font-family: \'Space Mono\', monospace;\n'], ['\n  font-size: 12px;\n  line-height: 12px;\n  font-family: \'Space Mono\', monospace;\n']);
 
 var _react = require('react');
 
@@ -44,16 +43,16 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var TightNav = function (_React$Component) {
-  _inherits(TightNav, _React$Component);
+var LightNav = function (_React$Component) {
+  _inherits(LightNav, _React$Component);
 
-  function TightNav() {
-    _classCallCheck(this, TightNav);
+  function LightNav() {
+    _classCallCheck(this, LightNav);
 
-    return _possibleConstructorReturn(this, (TightNav.__proto__ || Object.getPrototypeOf(TightNav)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (LightNav.__proto__ || Object.getPrototypeOf(LightNav)).apply(this, arguments));
   }
 
-  _createClass(TightNav, [{
+  _createClass(LightNav, [{
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
@@ -71,46 +70,12 @@ var TightNav = function (_React$Component) {
               _react2.default.createElement(
                 Left,
                 null,
-                _react2.default.createElement(Logo, { to: '/', title: 'Home' })
+                _react2.default.createElement(Logo, { img: this.props.image, to: '/', title: 'Home' })
               ),
               _react2.default.createElement(
                 Right,
                 null,
-                _react2.default.createElement(
-                  StyledLink,
-                  { to: '/mission/' },
-                  'Mission'
-                ),
-                ' | ',
-                _react2.default.createElement(
-                  StyledLink,
-                  { to: '/reports/' },
-                  'Reports'
-                ),
-                ' | ',
-                _react2.default.createElement(
-                  StyledLink,
-                  { to: 'http://oira.ua.edu/factbook' },
-                  'Factbook'
-                ),
-                ' | ',
-                _react2.default.createElement(
-                  StyledLink,
-                  { to: '/requests/' },
-                  'Requests'
-                ),
-                ' | ',
-                _react2.default.createElement(
-                  StyledLink,
-                  { to: '/staff/' },
-                  'Staff'
-                ),
-                ' | ',
-                _react2.default.createElement(
-                  StyledLink,
-                  { to: '/resources/' },
-                  'Resources'
-                )
+                this.props.children
               )
             )
           )
@@ -119,18 +84,18 @@ var TightNav = function (_React$Component) {
     }
   }]);
 
-  return TightNav;
+  return LightNav;
 }(_react2.default.Component);
 
-exports.default = TightNav;
+exports.default = LightNav;
 
 
 var PageWidth = _styledComponents2.default.header(_templateObject);
-var Logo = (0, _styledComponents2.default)(_Link2.default)(_templateObject2, _oiraLogo2.default);
+var Logo = (0, _styledComponents2.default)(_Link2.default)(_templateObject2, function (props) {
+  return props.img || _oiraLogo2.default;
+});
 var ContentWidth = _styledComponents2.default.div(_templateObject3);
 var Left = _styledComponents2.default.div(_templateObject4);
 var Right = _styledComponents2.default.div(_templateObject5);
 
 var Contact = _styledComponents2.default.p(_templateObject6);
-var StyledLink = (0, _styledComponents2.default)(_Link2.default)(_templateObject7);
-var StyledAnchor = _styledComponents2.default.a(_templateObject7);

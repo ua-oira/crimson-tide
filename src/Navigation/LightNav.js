@@ -5,7 +5,7 @@ import Headroom from 'react-headroom'
 import LogoImage from '../logos/oira-logo.svg'
 import Link from '../Link'
 
-class TightNav extends React.Component {
+class LightNav extends React.Component {
   render() {
     return (
       <nav>
@@ -13,23 +13,9 @@ class TightNav extends React.Component {
           <PageWidth>
             <ContentWidth>
               <Left>
-                <Logo to="/" title="Home" />
+                <Logo img={this.props.image} to="/" title="Home" />
               </Left>
-              <Right>
-                <StyledLink to="/mission/">{'Mission'}</StyledLink>
-                {' | '}
-                <StyledLink to="/reports/">{'Reports'}</StyledLink>
-                {' | '}
-                <StyledLink to="http://oira.ua.edu/factbook">
-                  {'Factbook'}
-                </StyledLink>
-                {' | '}
-                <StyledLink to="/requests/">{'Requests'}</StyledLink>
-                {' | '}
-                <StyledLink to="/staff/">{'Staff'}</StyledLink>
-                {' | '}
-                <StyledLink to="/resources/">{'Resources'}</StyledLink>
-              </Right>
+              <Right>{this.props.children}</Right>
             </ContentWidth>
           </PageWidth>
         </Headroom>
@@ -38,7 +24,7 @@ class TightNav extends React.Component {
   }
 }
 
-export default TightNav
+export default LightNav
 
 const PageWidth = styled.header`
   border-bottom: 1px solid hsla(0, 0%, 0%, 0.2);
@@ -51,7 +37,7 @@ const Logo = styled(Link)`
   height: 80px;
   border-bottom: none;
   background-color: blue;
-  background: url(${LogoImage});
+  background: url(${props => props.img || LogoImage});
   background-size: 100% 100%;
   background-repeat: no-repeat;
   text-indent: -9999px;
@@ -106,32 +92,4 @@ const Contact = styled.p`
   font-size: 12px;
   line-height: 12px;
   font-family: 'Space Mono', monospace;
-`
-const StyledLink = styled(Link)`
-  color: black;
-  font-size: 1.1em;
-  text-decoration: none;
-  &:hover {
-    color: #990000;
-  }
-  &:active {
-    font-weight: bold;
-  }
-  @media (max-width: 810px) {
-    line-height: 1.5em;
-  }
-`
-const StyledAnchor = styled.a`
-  color: black;
-  font-size: 1.1em;
-  text-decoration: none;
-  &:hover {
-    color: #990000;
-  }
-  &:active {
-    font-weight: bold;
-  }
-  @media (max-width: 810px) {
-    line-height: 1.5em;
-  }
 `

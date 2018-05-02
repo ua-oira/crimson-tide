@@ -1,12 +1,13 @@
 import React from 'react'
 // Navigation
 import Nav from './Navigation/Nav.js'
-import TightNav from './Navigation/TightNav.js'
+import LightNav from './Navigation/LightNav.js'
 import NavWithMenu from './Navigation/NavWithMenu.js'
 import NavLink from './Navigation/NavLink.js'
+import LightLink from './Navigation/LightLink.js'
 import PageTitle from './PageTitle.js'
 import Main from './Main.js'
-import SmFooter from './SmFooter.js'
+import SmFooter from './Footer/SmFooter.js'
 // Logos
 import ChimeIn from './logos/chime-in.svg'
 import GDGD from './logos/gdgd.svg'
@@ -19,7 +20,8 @@ import Link from './Link.js'
 export {
   Nav,
   NavLink,
-  TightNav,
+  LightLink,
+  LightNav,
   PageTitle,
   Main,
   SmFooter,

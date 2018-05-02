@@ -6,9 +6,9 @@ import { linkTo } from '@storybook/addon-links'
 import { withInfo } from '@storybook/addon-info'
 import StoryRouter from 'storybook-react-router'
 
-import { TightNav, ChimeIn } from '../../src/index'
+import { LightNav, LightLink } from '../../src/index'
 
-const NavLinks = [
+const LightLinks = [
   { title: 'Planning Group', path: '/planning-group' },
   { title: 'Steering Committee', path: '/steering-committee' },
   { title: 'FAQ', path: '/faq' },
@@ -18,7 +18,7 @@ const NavLinks = [
 storiesOf('Navigation', module)
   .addDecorator(StoryRouter())
   .add(
-    'TightNav',
+    'LightNav',
     withInfo(`
       - A basic navbar. 
       - Great for quick site spin-up. 
@@ -29,17 +29,23 @@ storiesOf('Navigation', module)
       ~~~js
       import { Nav, ChimeIn } from 'crimson-tide'
 
-      const NavLinks = [
-        { title: 'Planning Group', path: '/planning-group' },
-        { title: 'Steering Committee', path: '/steering-committee' },
-        { title: 'FAQ', path: '/faq' },
-        { title: 'Resources', path: '/resources' },
-      ]
 
-      <Nav image={ChimeIn} links={NavLinks} />
+      <Nav image={ChimeIn}/>
       ~~~
     
     `)(() => (
-      <TightNav />
+      <LightNav>
+        <LightLink to="/mission/">{'Mission'}</LightLink>
+        {' | '}
+        <LightLink to="/reports/">{'Reports'}</LightLink>
+        {' | '}
+        <LightLink to="http://oira.ua.edu/factbook">{'Factbook'}</LightLink>
+        {' | '}
+        <LightLink to="/requests/">{'Requests'}</LightLink>
+        {' | '}
+        <LightLink to="/staff/">{'Staff'}</LightLink>
+        {' | '}
+        <LightLink to="/resources/">{'Resources'}</LightLink>
+      </LightNav>
     ))
   )
