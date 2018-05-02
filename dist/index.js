@@ -5,10 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.NavWithMenu = exports.Link = exports.Tab = exports.Tabs = exports.OiraStyles = exports.ALAIR = exports.OIRALogo = exports.GDGD = exports.ChimeIn = exports.LogoFooter = exports.SmFooter = exports.Main = exports.PageTitle = exports.LightNav = exports.LightLink = exports.NavLink = exports.Nav = undefined;
 
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
-
 var _Nav = require('./Navigation/Nav.js');
 
 var _Nav2 = _interopRequireDefault(_Nav);
