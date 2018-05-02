@@ -71,7 +71,7 @@ const ContentWidth = styled.div`
   margin: 0 auto;
   width: 100%;
   padding: 0 1.0875rem;
-  max-width: 1148px;
+  max-width: 960px;
   justify-content: space-between;
   align-items: center;
   @media (max-width: 810px) {
