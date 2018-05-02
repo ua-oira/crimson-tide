@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import Link from '../Link.js'
 import styled from 'styled-components'
 import Obfuscate from 'react-obfuscate'
 

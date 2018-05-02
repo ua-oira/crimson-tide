@@ -17,9 +17,9 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _gatsbyLink = require('gatsby-link');
+var _Link = require('../Link.js');
 
-var _gatsbyLink2 = _interopRequireDefault(_gatsbyLink);
+var _Link2 = _interopRequireDefault(_Link);
 
 var _styledComponents = require('styled-components');
 
@@ -89,6 +89,6 @@ var LeftSide = exports.LeftSide = _styledComponents2.default.div(_templateObject
 var RightSide = exports.RightSide = _styledComponents2.default.div(_templateObject4);
 var Copyright = exports.Copyright = _styledComponents2.default.p(_templateObject5);
 var Contact = exports.Contact = _styledComponents2.default.p(_templateObject6);
-var StyledLink = exports.StyledLink = (0, _styledComponents2.default)(_gatsbyLink2.default)(_templateObject7);
+var StyledLink = exports.StyledLink = (0, _styledComponents2.default)(_Link2.default)(_templateObject7);
 var Styleda = _styledComponents2.default.a(_templateObject7);
 var Styledo = (0, _styledComponents2.default)(_reactObfuscate2.default)(_templateObject7);

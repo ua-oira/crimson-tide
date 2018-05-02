@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.NavWithMenu = exports.Link = exports.Tab = exports.Tabs = exports.OiraStyles = exports.ALAIR = exports.OIRALogo = exports.GDGD = exports.ChimeIn = exports.SmFooter = exports.Main = exports.PageTitle = exports.LightNav = exports.LightLink = exports.NavLink = exports.Nav = undefined;
+exports.NavWithMenu = exports.Link = exports.Tab = exports.Tabs = exports.OiraStyles = exports.ALAIR = exports.OIRALogo = exports.GDGD = exports.ChimeIn = exports.LogoFooter = exports.SmFooter = exports.Main = exports.PageTitle = exports.LightNav = exports.LightLink = exports.NavLink = exports.Nav = undefined;
 
 var _react = require('react');
 
@@ -41,6 +41,10 @@ var _SmFooter = require('./Footer/SmFooter.js');
 
 var _SmFooter2 = _interopRequireDefault(_SmFooter);
 
+var _LogoFooter = require('./Footer/LogoFooter.js');
+
+var _LogoFooter2 = _interopRequireDefault(_LogoFooter);
+
 var _chimeIn = require('./logos/chime-in.svg');
 
 var _chimeIn2 = _interopRequireDefault(_chimeIn);
@@ -69,6 +73,7 @@ var _Link2 = _interopRequireDefault(_Link);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// Navigation
 exports.Nav = _Nav2.default;
 exports.NavLink = _NavLink2.default;
 exports.LightLink = _LightLink2.default;
@@ -76,6 +81,7 @@ exports.LightNav = _LightNav2.default;
 exports.PageTitle = _PageTitle2.default;
 exports.Main = _Main2.default;
 exports.SmFooter = _SmFooter2.default;
+exports.LogoFooter = _LogoFooter2.default;
 exports.ChimeIn = _chimeIn2.default;
 exports.GDGD = _gdgd2.default;
 exports.OIRALogo = _oiraLogo2.default;
@@ -85,6 +91,5 @@ exports.Tabs = _Tabs.Tabs;
 exports.Tab = _Tabs.Tab;
 exports.Link = _Link2.default;
 exports.NavWithMenu = _NavWithMenu2.default;
-// Logos
 
-// Navigation
+// Logos
