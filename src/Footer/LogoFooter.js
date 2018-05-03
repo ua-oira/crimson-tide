@@ -1,50 +1,38 @@
 import React from 'react'
 import Link from '../Link.js'
 import styled from 'styled-components'
-import Obfuscate from 'react-obfuscate'
 
 import { GDGD } from '../../src/index'
 
-class Footer extends React.Component {
-  render() {
-    let date = new Date()
-    let year = date.getFullYear()
-    return (
-      <footer>
-        <PageWidth>
-          <ContentWidth>
-            <LeftSide>
-              <Logo
-                img={this.props.image}
-                to="/"
-                title="The Office of Institutional Research and Assessement"
-              />
-            </LeftSide>
-            <RightSide>
-              <Copyright>© {year} The University of Alabama</Copyright>
-              <StyledAnchor
-                href="http://maps.apple.com/?q=33.2084338+-87.5472800"
-                title="Building Name and Address"
-              >
-                {'East Annex'}
-              </StyledAnchor>
-              {' | '}
-              <StyledObfuscatedLink tel="205-348-7200" title="Telephone Number">
-                {'205-348-7200'}
-              </StyledObfuscatedLink>
-              {' | '}
-              <StyledLink to="/contact/">{'OIRA Contact'}</StyledLink>
-            </RightSide>
-          </ContentWidth>
-        </PageWidth>
-      </footer>
-    )
-  }
+const LogoFooter = props => {
+  let date = new Date()
+  let year = date.getFullYear()
+  return (
+    <PageWidth>
+      <ContentWidth>
+        <LeftSide>
+          <Logo
+            img={props.image}
+            to="/"
+            title="The Office of Institutional Research and Assessement"
+          />
+        </LeftSide>
+        <RightSide>
+          <Copyright>© {year} The University of Alabama</Copyright>
+          <StyledLink to="33.2084338,-87.5472800">{'East Annex'}</StyledLink>
+          {'|'}
+          <StyledLink to="205-348-7200" />
+          {'|'}
+          <StyledLink to="/contact/">OIRA Contact</StyledLink>
+        </RightSide>
+      </ContentWidth>
+    </PageWidth>
+  )
 }
 
-export default Footer
+export default LogoFooter
 
-export const PageWidth = styled.div`
+export const PageWidth = styled.footer`
   border-top: 1px solid hsla(0, 0%, 0%, 0.2);
   position: relative;
   right: 0;
@@ -109,32 +97,15 @@ export const Contact = styled.p`
   line-height: 12px;
   font-family: 'Space Mono', monospace;
 `
-export const StyledLink = styled(Link)`
+
+const StyledLink = styled(Link)`
   color: black;
+  padding-left: 5px;
+  padding-right: 5px;
   text-decoration: none;
-  &:hover {
-    color: #990000;
+  &:last-child{
+    padding-right: 0;
   }
-  &:active {
-    font-weight: bold;
-  }
-`
-const StyledAnchor = styled.a`
-  color: black;
-  text-decoration: none;
-  &:hover {
-    color: #990000;
-  }
-  &:active {
-    font-weight: bold;
-  }
-  @media (max-width: 768px) {
-    line-height: 1.5em;
-  }
-`
-const StyledObfuscatedLink = styled(Obfuscate)`
-  color: black;
-  text-decoration: none;
   &:hover {
     color: #990000;
   }

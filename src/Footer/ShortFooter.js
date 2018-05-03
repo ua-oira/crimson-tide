@@ -8,36 +8,29 @@ const SmFooter = props => {
   let year = date.getFullYear()
   return (
     <ColorWrapper>
-      <LowFooter>
+      <ContentWidth>
         <LeftSide>
-          <Styleda href="http://ua.edu">
+          <StyledLink href="http://ua.edu">
             © {year} The University of Alabama
-          </Styleda>
+          </StyledLink>
         </LeftSide>
         <RightSide>
-          <Styleda
-            href="http://maps.apple.com/?q=33.2084338+-87.5472800"
-            title="Building Name and Address"
-          >
-            {'East Annex'}
-          </Styleda>
-          {' | '}
-          <Styledo tel="205-348-7200" title="Telephone Number">
-            {'205-348-7200'}
-          </Styledo>
-          {' | '}
-          <Styleda href="http://oira.ua.edu/new/contact/" title="Contact">
-            {'OIRA Contact'}
-          </Styleda>
+        <StyledLink to="33.2084338,-87.5472800">
+                {'East Annex'}
+              </StyledLink>
+              {'|'}
+              <StyledLink to="205-348-7200"/>
+              {'|'}
+              <StyledLink to="/contact/">{'OIRA Contact'}</StyledLink>
         </RightSide>
-      </LowFooter>
+      </ContentWidth>
     </ColorWrapper>
   )
 }
 
 export default SmFooter
 
-export const ColorWrapper = styled.div`
+const ColorWrapper = styled.div`
   position: relative;
   right: 0;
   bottom: 0;
@@ -49,7 +42,7 @@ export const ColorWrapper = styled.div`
     display: none;
   }
 `
-export const LowFooter = styled.footer`
+const ContentWidth = styled.footer`
   font-size: 0.88em;
   line-height: 0.88em;
   display: flex;
@@ -66,10 +59,10 @@ export const LowFooter = styled.footer`
   }
 `
 
-export const LeftSide = styled.div`
+const LeftSide = styled.div`
   float: left;
 `
-export const RightSide = styled.div`
+const RightSide = styled.div`
   text-align: right;
   color: hsla(0, 0%, 0%, 0.2);
   float: Right;
@@ -77,49 +70,26 @@ export const RightSide = styled.div`
     text-align: center;
   }
 `
-export const Copyright = styled.p`
+const Copyright = styled.p`
   border-bottom: none;
   line-height: 19px;
   margin-bottom: 6px;
   justify: right;
 `
-export const Contact = styled.p`
+const Contact = styled.p`
   font-size: 12px;
   line-height: 12px;
   font-family: 'Space Mono', monospace;
 `
-export const StyledLink = styled(Link)`
+
+const StyledLink = styled(Link)`
   color: black;
-  font-size: 1.1em;
+  padding-left: 5px;
+  padding-right: 5px;
   text-decoration: none;
-  &:hover {
-    color: #990000;
+  &:last-child{
+    padding-right: 0;
   }
-  &:active {
-    font-weight: bold;
-  }
-  @media (max-width: 768px) {
-    line-height: 1.5em;
-  }
-`
-const Styleda = styled.a`
-  color: black;
-  font-size: 1.1em;
-  text-decoration: none;
-  &:hover {
-    color: #990000;
-  }
-  &:active {
-    font-weight: bold;
-  }
-  @media (max-width: 768px) {
-    line-height: 1.5em;
-  }
-`
-const Styledo = styled(Obfuscate)`
-  color: black;
-  font-size: 1.1em;
-  text-decoration: none;
   &:hover {
     color: #990000;
   }
