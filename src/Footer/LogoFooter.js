@@ -8,7 +8,9 @@ const LogoFooter = props => {
   let date = new Date()
   let year = date.getFullYear()
   return (
-    <PageWidth>
+    <footer>
+      {props.children}
+      <PageWidth>
       <ContentWidth>
         <LeftSide>
           <Logo
@@ -27,12 +29,13 @@ const LogoFooter = props => {
         </RightSide>
       </ContentWidth>
     </PageWidth>
+    </footer>
   )
 }
 
 export default LogoFooter
 
-export const PageWidth = styled.footer`
+export const PageWidth = styled.div`
   border-top: 1px solid hsla(0, 0%, 0%, 0.2);
   position: relative;
   right: 0;
