@@ -2,7 +2,7 @@ import React from 'react'
 import Link from '../Link.js'
 import styled from 'styled-components'
 
-import { GDGD } from '../logos/gdgd.svg'
+import GDGD from '../logos/gdgd.svg'
 
 const LogoFooter = props => {
   let date = new Date()
