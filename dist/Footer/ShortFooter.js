@@ -3,7 +3,6 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.StyledLink = exports.Contact = exports.Copyright = exports.RightSide = exports.LeftSide = exports.LowFooter = exports.ColorWrapper = undefined;
 
 var _templateObject = _taggedTemplateLiteral(['\n  position: relative;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  border-top: 1px solid #eee;\n  color: black;\n  padding-top: 0.5em;\n  @media print {\n    display: none;\n  }\n'], ['\n  position: relative;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  border-top: 1px solid #eee;\n  color: black;\n  padding-top: 0.5em;\n  @media print {\n    display: none;\n  }\n']),
     _templateObject2 = _taggedTemplateLiteral(['\n  font-size: 0.88em;\n  line-height: 0.88em;\n  display: flex;\n  color: black;\n  flex-flow: row wrap;\n  margin: 0 auto;\n  width: 100%;\n  padding: 20px 1.0875rem;\n  max-width: 960px;\n  justify-content: space-between;\n  align-items: center;\n  @media (max-width: 768px) {\n    flex-flow: column;\n  }\n'], ['\n  font-size: 0.88em;\n  line-height: 0.88em;\n  display: flex;\n  color: black;\n  flex-flow: row wrap;\n  margin: 0 auto;\n  width: 100%;\n  padding: 20px 1.0875rem;\n  max-width: 960px;\n  justify-content: space-between;\n  align-items: center;\n  @media (max-width: 768px) {\n    flex-flow: column;\n  }\n']),
@@ -11,7 +10,7 @@ var _templateObject = _taggedTemplateLiteral(['\n  position: relative;\n  right:
     _templateObject4 = _taggedTemplateLiteral(['\n  text-align: right;\n  color: hsla(0, 0%, 0%, 0.2);\n  float: Right;\n  @media (max-width: 768px) {\n    text-align: center;\n  }\n'], ['\n  text-align: right;\n  color: hsla(0, 0%, 0%, 0.2);\n  float: Right;\n  @media (max-width: 768px) {\n    text-align: center;\n  }\n']),
     _templateObject5 = _taggedTemplateLiteral(['\n  border-bottom: none;\n  line-height: 19px;\n  margin-bottom: 6px;\n  justify: right;\n'], ['\n  border-bottom: none;\n  line-height: 19px;\n  margin-bottom: 6px;\n  justify: right;\n']),
     _templateObject6 = _taggedTemplateLiteral(['\n  font-size: 12px;\n  line-height: 12px;\n  font-family: \'Space Mono\', monospace;\n'], ['\n  font-size: 12px;\n  line-height: 12px;\n  font-family: \'Space Mono\', monospace;\n']),
-    _templateObject7 = _taggedTemplateLiteral(['\n  color: black;\n  font-size: 1.1em;\n  text-decoration: none;\n  &:hover {\n    color: #990000;\n  }\n  &:active {\n    font-weight: bold;\n  }\n  @media (max-width: 768px) {\n    line-height: 1.5em;\n  }\n'], ['\n  color: black;\n  font-size: 1.1em;\n  text-decoration: none;\n  &:hover {\n    color: #990000;\n  }\n  &:active {\n    font-weight: bold;\n  }\n  @media (max-width: 768px) {\n    line-height: 1.5em;\n  }\n']);
+    _templateObject7 = _taggedTemplateLiteral(['\n  color: black;\n  padding-left: 5px;\n  padding-right: 5px;\n  text-decoration: none;\n  &:last-child {\n    padding-right: 0;\n  }\n  &:hover {\n    color: #990000;\n  }\n  &:active {\n    font-weight: bold;\n  }\n  @media (max-width: 768px) {\n    line-height: 1.5em;\n  }\n'], ['\n  color: black;\n  padding-left: 5px;\n  padding-right: 5px;\n  text-decoration: none;\n  &:last-child {\n    padding-right: 0;\n  }\n  &:hover {\n    color: #990000;\n  }\n  &:active {\n    font-weight: bold;\n  }\n  @media (max-width: 768px) {\n    line-height: 1.5em;\n  }\n']);
 
 var _react = require('react');
 
@@ -40,13 +39,13 @@ var SmFooter = function SmFooter(props) {
     ColorWrapper,
     null,
     _react2.default.createElement(
-      LowFooter,
+      ContentWidth,
       null,
       _react2.default.createElement(
         LeftSide,
         null,
         _react2.default.createElement(
-          Styleda,
+          StyledLink,
           { href: 'http://ua.edu' },
           '\xA9 ',
           year,
@@ -57,23 +56,16 @@ var SmFooter = function SmFooter(props) {
         RightSide,
         null,
         _react2.default.createElement(
-          Styleda,
-          {
-            href: 'http://maps.apple.com/?q=33.2084338+-87.5472800',
-            title: 'Building Name and Address'
-          },
+          StyledLink,
+          { to: '33.2084338,-87.5472800' },
           'East Annex'
         ),
-        ' | ',
+        '|',
+        _react2.default.createElement(StyledLink, { to: '205-348-7200' }),
+        '|',
         _react2.default.createElement(
-          Styledo,
-          { tel: '205-348-7200', title: 'Telephone Number' },
-          '205-348-7200'
-        ),
-        ' | ',
-        _react2.default.createElement(
-          Styleda,
-          { href: 'http://oira.ua.edu/new/contact/', title: 'Contact' },
+          StyledLink,
+          { to: '/contact/' },
           'OIRA Contact'
         )
       )
@@ -82,13 +74,14 @@ var SmFooter = function SmFooter(props) {
 };
 
 exports.default = SmFooter;
-var ColorWrapper = exports.ColorWrapper = _styledComponents2.default.div(_templateObject);
-var LowFooter = exports.LowFooter = _styledComponents2.default.footer(_templateObject2);
 
-var LeftSide = exports.LeftSide = _styledComponents2.default.div(_templateObject3);
-var RightSide = exports.RightSide = _styledComponents2.default.div(_templateObject4);
-var Copyright = exports.Copyright = _styledComponents2.default.p(_templateObject5);
-var Contact = exports.Contact = _styledComponents2.default.p(_templateObject6);
-var StyledLink = exports.StyledLink = (0, _styledComponents2.default)(_Link2.default)(_templateObject7);
-var Styleda = _styledComponents2.default.a(_templateObject7);
-var Styledo = (0, _styledComponents2.default)(_reactObfuscate2.default)(_templateObject7);
+
+var ColorWrapper = _styledComponents2.default.div(_templateObject);
+var ContentWidth = _styledComponents2.default.footer(_templateObject2);
+
+var LeftSide = _styledComponents2.default.div(_templateObject3);
+var RightSide = _styledComponents2.default.div(_templateObject4);
+var Copyright = _styledComponents2.default.p(_templateObject5);
+var Contact = _styledComponents2.default.p(_templateObject6);
+
+var StyledLink = (0, _styledComponents2.default)(_Link2.default)(_templateObject7);

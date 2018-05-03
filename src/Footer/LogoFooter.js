@@ -103,7 +103,7 @@ const StyledLink = styled(Link)`
   padding-left: 5px;
   padding-right: 5px;
   text-decoration: none;
-  &:last-child{
+  &:last-child {
     padding-right: 0;
   }
   &:hover {

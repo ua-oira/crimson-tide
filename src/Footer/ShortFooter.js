@@ -15,13 +15,11 @@ const SmFooter = props => {
           </StyledLink>
         </LeftSide>
         <RightSide>
-        <StyledLink to="33.2084338,-87.5472800">
-                {'East Annex'}
-              </StyledLink>
-              {'|'}
-              <StyledLink to="205-348-7200"/>
-              {'|'}
-              <StyledLink to="/contact/">{'OIRA Contact'}</StyledLink>
+          <StyledLink to="33.2084338,-87.5472800">{'East Annex'}</StyledLink>
+          {'|'}
+          <StyledLink to="205-348-7200" />
+          {'|'}
+          <StyledLink to="/contact/">{'OIRA Contact'}</StyledLink>
         </RightSide>
       </ContentWidth>
     </ColorWrapper>
@@ -87,7 +85,7 @@ const StyledLink = styled(Link)`
   padding-left: 5px;
   padding-right: 5px;
   text-decoration: none;
-  &:last-child{
+  &:last-child {
     padding-right: 0;
   }
   &:hover {

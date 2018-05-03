@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.NavWithMenu = exports.Link = exports.Tab = exports.Tabs = exports.OiraStyles = exports.ALAIR = exports.OIRALogo = exports.GDGD = exports.ChimeIn = exports.LogoFooter = exports.SmFooter = exports.Main = exports.PageTitle = exports.LightNav = exports.LightLink = exports.NavLink = exports.Nav = undefined;
+exports.NavWithMenu = exports.Link = exports.Tab = exports.Tabs = exports.OiraStyles = exports.ALAIR = exports.OIRALogo = exports.GDGD = exports.ChimeIn = exports.LogoFooter = exports.ShortFooter = exports.Main = exports.PageTitle = exports.LightNav = exports.LightLink = exports.NavLink = exports.Nav = undefined;
 
 var _Nav = require('./Navigation/Nav.js');
 
@@ -33,9 +33,9 @@ var _Main = require('./Main.js');
 
 var _Main2 = _interopRequireDefault(_Main);
 
-var _SmFooter = require('./Footer/SmFooter.js');
+var _ShortFooter = require('./Footer/ShortFooter.js');
 
-var _SmFooter2 = _interopRequireDefault(_SmFooter);
+var _ShortFooter2 = _interopRequireDefault(_ShortFooter);
 
 var _LogoFooter = require('./Footer/LogoFooter.js');
 
@@ -76,7 +76,7 @@ exports.LightLink = _LightLink2.default;
 exports.LightNav = _LightNav2.default;
 exports.PageTitle = _PageTitle2.default;
 exports.Main = _Main2.default;
-exports.SmFooter = _SmFooter2.default;
+exports.ShortFooter = _ShortFooter2.default;
 exports.LogoFooter = _LogoFooter2.default;
 exports.ChimeIn = _chimeIn2.default;
 exports.GDGD = _gdgd2.default;
