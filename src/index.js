@@ -6,7 +6,7 @@ import NavLink from './Navigation/NavLink.js'
 import LightLink from './Navigation/LightLink.js'
 import PageTitle from './PageTitle.js'
 import Main from './Main.js'
-import SmFooter from './Footer/SmFooter.js'
+import ShortFooter from './Footer/ShortFooter.js'
 import LogoFooter from './Footer/LogoFooter.js'
 
 // Logos
@@ -25,7 +25,7 @@ export {
   LightNav,
   PageTitle,
   Main,
-  SmFooter,
+  ShortFooter,
   LogoFooter,
   // LOGOS
   ChimeIn,
