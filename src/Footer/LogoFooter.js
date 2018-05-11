@@ -11,24 +11,24 @@ const LogoFooter = props => {
     <footer>
       {props.children}
       <PageWidth>
-      <ContentWidth>
-        <LeftSide>
-          <Logo
-            img={props.image}
-            to="/"
-            title="The Office of Institutional Research and Assessement"
-          />
-        </LeftSide>
-        <RightSide>
-          <Copyright>© {year} The University of Alabama</Copyright>
-          <StyledLink to="33.2084338,-87.5472800">{'East Annex'}</StyledLink>
-          {'|'}
-          <StyledLink to="205-348-7200" />
-          {'|'}
-          <StyledLink to="/contact/">OIRA Contact</StyledLink>
-        </RightSide>
-      </ContentWidth>
-    </PageWidth>
+        <ContentWidth>
+          <LeftSide>
+            <Logo
+              img={props.image}
+              to="/"
+              title="The Office of Institutional Research and Assessement"
+            />
+          </LeftSide>
+          <RightSide>
+            <Copyright>© {year} The University of Alabama</Copyright>
+            <StyledLink to="33.2084338,-87.5472800">{'East Annex'}</StyledLink>
+            {'|'}
+            <StyledLink to="205-348-7200" />
+            {'|'}
+            <StyledLink to="/contact/">OIRA Contact</StyledLink>
+          </RightSide>
+        </ContentWidth>
+      </PageWidth>
     </footer>
   )
 }
