@@ -28,6 +28,8 @@ var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
 var _gdgd = require('../logos/gdgd.svg');
 
+var _gdgd2 = _interopRequireDefault(_gdgd);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
@@ -36,42 +38,47 @@ var LogoFooter = function LogoFooter(props) {
   var date = new Date();
   var year = date.getFullYear();
   return _react2.default.createElement(
-    PageWidth,
+    'footer',
     null,
+    props.children,
     _react2.default.createElement(
-      ContentWidth,
+      PageWidth,
       null,
       _react2.default.createElement(
-        LeftSide,
-        null,
-        _react2.default.createElement(Logo, {
-          img: props.image,
-          to: '/',
-          title: 'The Office of Institutional Research and Assessement'
-        })
-      ),
-      _react2.default.createElement(
-        RightSide,
+        ContentWidth,
         null,
         _react2.default.createElement(
-          Copyright,
+          LeftSide,
           null,
-          '\xA9 ',
-          year,
-          ' The University of Alabama'
+          _react2.default.createElement(Logo, {
+            img: props.image,
+            to: '/',
+            title: 'The Office of Institutional Research and Assessement'
+          })
         ),
         _react2.default.createElement(
-          StyledLink,
-          { to: '33.2084338,-87.5472800' },
-          'East Annex'
-        ),
-        '|',
-        _react2.default.createElement(StyledLink, { to: '205-348-7200' }),
-        '|',
-        _react2.default.createElement(
-          StyledLink,
-          { to: '/contact/' },
-          'OIRA Contact'
+          RightSide,
+          null,
+          _react2.default.createElement(
+            Copyright,
+            null,
+            '\xA9 ',
+            year,
+            ' The University of Alabama'
+          ),
+          _react2.default.createElement(
+            StyledLink,
+            { to: '33.2084338,-87.5472800' },
+            'East Annex'
+          ),
+          '|',
+          _react2.default.createElement(StyledLink, { to: '205-348-7200' }),
+          '|',
+          _react2.default.createElement(
+            StyledLink,
+            { to: '/contact/' },
+            'OIRA Contact'
+          )
         )
       )
     )
@@ -79,9 +86,9 @@ var LogoFooter = function LogoFooter(props) {
 };
 
 exports.default = LogoFooter;
-var PageWidth = exports.PageWidth = _styledComponents2.default.footer(_templateObject);
+var PageWidth = exports.PageWidth = _styledComponents2.default.div(_templateObject);
 var Logo = exports.Logo = (0, _styledComponents2.default)(_Link2.default)(_templateObject2, function (props) {
-  return props.img || _gdgd.GDGD;
+  return props.img || _gdgd2.default;
 });
 var ContentWidth = exports.ContentWidth = _styledComponents2.default.div(_templateObject3);
 
