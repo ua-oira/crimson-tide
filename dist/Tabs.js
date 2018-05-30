@@ -35,10 +35,14 @@ var Tab = function Tab(_ref) {
 var Tabs = (0, _withState2.default)('tab', 'updateTab')(function (_ref2) {
   var children = _ref2.children,
       tab = _ref2.tab,
+      activeTab = _ref2.activeTab,
       updateTab = _ref2.updateTab,
       onUpdate = _ref2.onUpdate;
 
-  var activeChild = tab ? children.filter(function (c) {
+  // if activeTab passed, use that instead of state
+  var activeChild = activeTab ? children.filter(function (c) {
+    return c.props.title == activeTab;
+  })[0] : tab ? children.filter(function (c) {
     return c.props.title == tab;
   })[0] : children[0];
 
