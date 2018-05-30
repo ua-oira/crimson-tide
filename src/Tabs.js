@@ -6,10 +6,13 @@ import withState from 'recompose/withState'
 const Tab = ({ render }) => render()
 
 const Tabs = withState('tab', 'updateTab')(
-  ({ children, tab, updateTab, onUpdate }) => {
-    const activeChild = tab
-      ? children.filter(c => c.props.title == tab)[0]
-      : children[0]
+  ({ children, tab, activeTab, updateTab, onUpdate }) => {
+    // if activeTab passed, use that instead of state
+    const activeChild = activeTab
+      ? children.filter(c => c.props.title == activeTab)[0]
+        : tab
+          ? children.filter(c => c.props.title == tab)[0]
+          : children[0]
 
     return (
       <Styles>
