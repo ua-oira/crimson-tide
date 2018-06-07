@@ -51,7 +51,7 @@ var LogoFooter = function LogoFooter(props) {
           LeftSide,
           null,
           _react2.default.createElement(Logo, {
-            img: props.image,
+            image: props.image,
             to: '/',
             title: 'The Office of Institutional Research and Assessement'
           })
@@ -88,7 +88,7 @@ var LogoFooter = function LogoFooter(props) {
 exports.default = LogoFooter;
 var PageWidth = exports.PageWidth = _styledComponents2.default.div(_templateObject);
 var Logo = exports.Logo = (0, _styledComponents2.default)(_Link2.default)(_templateObject2, function (props) {
-  return props.img || _gdgd2.default;
+  return props.image || _gdgd2.default;
 });
 var ContentWidth = exports.ContentWidth = _styledComponents2.default.div(_templateObject3);
 

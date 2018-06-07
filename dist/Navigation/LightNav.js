@@ -70,7 +70,7 @@ var LightNav = function (_React$Component) {
               _react2.default.createElement(
                 Left,
                 null,
-                _react2.default.createElement(Logo, { img: this.props.image, to: '/', title: 'Home' })
+                _react2.default.createElement(Logo, { image: this.props.image, to: '/', title: 'Home' })
               ),
               _react2.default.createElement(
                 Right,
@@ -92,7 +92,7 @@ exports.default = LightNav;
 
 var PageWidth = _styledComponents2.default.header(_templateObject);
 var Logo = (0, _styledComponents2.default)(_Link2.default)(_templateObject2, function (props) {
-  return props.img || _oiraLogo2.default;
+  return props.image || _oiraLogo2.default;
 });
 var ContentWidth = _styledComponents2.default.div(_templateObject3, function (props) {
   return props.maxWidth || '960px';

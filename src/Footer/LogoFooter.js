@@ -14,7 +14,7 @@ const LogoFooter = props => {
         <ContentWidth>
           <LeftSide>
             <Logo
-              img={props.image}
+              image={props.image}
               to="/"
               title="The Office of Institutional Research and Assessement"
             />
@@ -53,7 +53,7 @@ export const Logo = styled(Link)`
   height: 80px;
   border-bottom: none;
   background-color: blue;
-  background: url(${props => props.img || GDGD});
+  background: url(${props => props.image || GDGD});
   background-size: 100% 100%;
   background-repeat: no-repeat;
   text-indent: -9999px;

@@ -13,7 +13,7 @@ class LightNav extends React.Component {
           <PageWidth>
             <ContentWidth maxWidth={this.props.maxWidth}>
               <Left>
-                <Logo img={this.props.image} to="/" title="Home" />
+                <Logo image={this.props.image} to="/" title="Home" />
               </Left>
               <Right>{this.props.children}</Right>
             </ContentWidth>
@@ -37,7 +37,7 @@ const Logo = styled(Link)`
   height: 80px;
   border-bottom: none;
   background-color: blue;
-  background: url(${props => props.img || LogoImage});
+  background: url(${props => props.image || LogoImage});
   background-size: 100% 100%;
   background-repeat: no-repeat;
   text-indent: -9999px;
