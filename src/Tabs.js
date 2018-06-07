@@ -10,9 +10,9 @@ const Tabs = withState('tab', 'updateTab')(
     // if activeTab passed, use that instead of state
     const activeChild = activeTab
       ? children.filter(c => c.props.title == activeTab)[0]
-        : tab
-          ? children.filter(c => c.props.title == tab)[0]
-          : children[0]
+      : tab
+        ? children.filter(c => c.props.title == tab)[0]
+        : children[0]
 
     return (
       <Styles>
