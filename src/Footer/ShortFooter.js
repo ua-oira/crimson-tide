@@ -3,30 +3,32 @@ import Link from '../Link.js'
 import styled from 'styled-components'
 import Obfuscate from 'react-obfuscate'
 
-const SmFooter = props => {
-  let date = new Date()
-  let year = date.getFullYear()
-  return (
-    <ColorWrapper>
-      <ContentWidth maxWidth={this.props.maxWidth}>
-        <LeftSide>
-          <StyledLink href="http://ua.edu">
-            © {year} The University of Alabama
-          </StyledLink>
-        </LeftSide>
-        <RightSide>
-          <StyledLink to="33.2084338,-87.5472800">{'East Annex'}</StyledLink>
-          {'|'}
-          <StyledLink to="205-348-7200" />
-          {'|'}
-          <StyledLink to="/contact/">{'OIRA Contact'}</StyledLink>
-        </RightSide>
-      </ContentWidth>
-    </ColorWrapper>
-  )
+class ShortFooter extends React.Component {
+  render() {
+    let date = new Date()
+    let year = date.getFullYear()
+    return (
+      <ColorWrapper>
+        <ContentWidth maxWidth={this.props.maxWidth}>
+          <LeftSide>
+            <StyledLink href="http://ua.edu">
+              © {year} The University of Alabama
+            </StyledLink>
+          </LeftSide>
+          <RightSide>
+            <StyledLink to="33.2084338,-87.5472800">{'East Annex'}</StyledLink>
+            {'|'}
+            <StyledLink to="205-348-7200" />
+            {'|'}
+            <StyledLink to="/contact/">{'OIRA Contact'}</StyledLink>
+          </RightSide>
+        </ContentWidth>
+      </ColorWrapper>
+    )
+  }
 }
 
-export default SmFooter
+export default ShortFooter
 
 const ColorWrapper = styled.div`
   position: relative;

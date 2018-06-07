@@ -21,5 +21,5 @@ storiesOf('Footer', module)
       <ShortFooter />
       ~~~
     
-    `)(() => <ShortFooter />)
+    `)(() => <ShortFooter maxWidth="100%" />)
 )
