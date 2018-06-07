@@ -11,7 +11,7 @@ class LightNav extends React.Component {
       <nav>
         <Headroom>
           <PageWidth>
-            <ContentWidth>
+            <ContentWidth maxWidth={this.props.maxWidth}>
               <Left>
                 <Logo img={this.props.image} to="/" title="Home" />
               </Left>
@@ -57,7 +57,7 @@ const ContentWidth = styled.div`
   margin: 0 auto;
   width: 100%;
   padding: 0 1.0875rem;
-  max-width: 960px;
+  max-width: ${props => props.maxWidth || '960px'};
   justify-content: space-between;
   align-items: center;
   @media (max-width: 810px) {

@@ -8,7 +8,7 @@ const SmFooter = props => {
   let year = date.getFullYear()
   return (
     <ColorWrapper>
-      <ContentWidth>
+      <ContentWidth maxWidth={this.props.maxWidth}>
         <LeftSide>
           <StyledLink href="http://ua.edu">
             © {year} The University of Alabama
@@ -49,7 +49,7 @@ const ContentWidth = styled.footer`
   margin: 0 auto;
   width: 100%;
   padding: 20px 1.0875rem;
-  max-width: 960px;
+  max-width: ${props => props.maxWidth || '960px'};
   justify-content: space-between;
   align-items: center;
   @media (max-width: 768px) {
