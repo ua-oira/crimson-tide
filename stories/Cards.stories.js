@@ -75,7 +75,7 @@ storiesOf('Cards', module).add(
         <Card
           image={KC}
           title="Example Six"
-          text="Fight to the data in America's premier subterranean institutional research workspace."
+          text="Less text height than top row cards"
         >
         <p>No link</p>
         </Card>
