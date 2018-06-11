@@ -16,6 +16,7 @@ import OIRALogo from './logos/oira-logo.svg'
 import ALAIR from './logos/alair-logo.svg'
 import OiraStyles from './styles/oira-styles.css'
 import { Tabs, Tab } from './Tabs.js'
+import { Cards, Card } from './Cards'
 import Link from './Link.js'
 
 export {
@@ -37,4 +38,6 @@ export {
   Tab,
   Link,
   NavWithMenu,
+  Card,
+  Cards,
 }
