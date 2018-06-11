@@ -6,7 +6,7 @@ import { withInfo } from '@storybook/addon-info'
 
 import Gorgas from './story-images/gorgaslibrary01_1920.jpg'
 import EA from './story-images/east-annex.jpg'
-import KC from './story-images/Kuffel-coliseum.jpg'
+import KC from './story-images/kuffel-coliseum.jpg'
 import { Card, Cards } from '../src/index'
 
 
