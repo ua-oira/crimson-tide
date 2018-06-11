@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 import Link from './Link.js'
 
 const Cards = props => (
@@ -27,6 +28,18 @@ const Card = props => (
 )
 
 export { Cards, Card }
+
+Card.propTypes = {
+  image: PropTypes.string,
+  link: PropTypes.string,
+  title: PropTypes.string,
+  text: PropTypes.string,
+  action: PropTypes.string,
+  children: PropTypes.node,
+}
+Cards.propTypes = {
+  children: PropTypes.node.isRequired,
+}
 
 const Deck = styled.div`
   .cards > ul {
