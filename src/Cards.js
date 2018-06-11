@@ -13,9 +13,9 @@ const Cards = props => (
 
 const Card = props => (
   <li className="card">
-    {props.image && (<div className="img">
-      {<img src={props.image} alt="" />}
-    </div>)}
+    {props.image && (
+      <div className="img">{<img src={props.image} alt="" />}</div>
+    )}
     <div className="text">
       <h2>
         <Link to={props.link}>{props.title}</Link>
