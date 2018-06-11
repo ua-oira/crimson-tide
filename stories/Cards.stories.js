@@ -64,7 +64,7 @@ storiesOf('Cards', module).add(
         <Card
           title="Example Four"
           link="http://oira.ua.edu"
-          text="No image, no children"
+          text="Gorgas Library supports teaching and research needs in humanities, social sciences, and government information as the campus’ main library. Gorgas Library supports teaching and research needs in humanities, social sciences, and government information as the campus’ main library."
         >
         </Card>
         <Card
