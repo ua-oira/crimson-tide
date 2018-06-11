@@ -6,7 +6,7 @@ import { withInfo } from '@storybook/addon-info'
 
 import Gorgas from './story-images/gorgaslibrary01_1920.jpg'
 import EA from './story-images/east-annex.jpg'
-import KC from './story-images/kuffle-coliseum.jpg'
+import KC from './story-images/Kuffel-coliseum.jpg'
 import { Card, Cards } from '../src/index'
 
 
@@ -55,7 +55,7 @@ storiesOf('Cards', module).add(
         </Card>
         <Card
           image={KC}
-          title="Kuffle Coliseum"
+          title="Kuffel Coliseum"
           link="http://oira.ua.edu"
           text="Fight to the data in America's premier subterranean institutional research workspace."
         >
