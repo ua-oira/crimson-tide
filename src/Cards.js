@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import Link from './Link.js'
 
-
 const Cards = props => (
   <Deck>
     <div className="cards">
