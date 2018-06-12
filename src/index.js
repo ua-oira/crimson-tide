@@ -18,6 +18,7 @@ import OiraStyles from './styles/oira-styles.css'
 import { Tabs, Tab } from './Tabs.js'
 import { Cards, Card } from './Cards'
 import Link from './Link.js'
+import AcheMap from './maps/AcheMap'
 
 export {
   Nav,
@@ -40,4 +41,5 @@ export {
   NavWithMenu,
   Card,
   Cards,
+  AcheMap,
 }
