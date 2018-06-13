@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import Link from './Link.js'
+import { isNullOrUndefined } from 'util'
 
 const Cards = props => (
   <Deck>
@@ -24,7 +25,10 @@ const Card = props => {
         </h2>
         <p>{props.text}</p>
         {props.children}
-        {props.action && <span className="cta">{props.action}</span>}
+        {props.action &&
+          props.action.length >= 1 && (
+            <span className="cta">{props.action}</span>
+          )}
       </div>
     </li>
   )

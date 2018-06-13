@@ -25,6 +25,8 @@ var _Link = require('./Link.js');
 
 var _Link2 = _interopRequireDefault(_Link);
 
+var _util = require('util');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
@@ -76,7 +78,7 @@ var Card = function Card(props) {
         props.text
       ),
       props.children,
-      props.action && _react2.default.createElement(
+      props.action && props.action.length >= 1 && _react2.default.createElement(
         'span',
         { className: 'cta' },
         props.action
