@@ -11,21 +11,24 @@ const Cards = props => (
   </Deck>
 )
 
-const Card = props => (
-  <li className="card">
-    {props.image && (
-      <div className="img">{<img src={props.image} alt="" />}</div>
-    )}
-    <div className="text">
-      <h2>
-        <Link to={props.link}>{props.title}</Link>
-      </h2>
-      <p>{props.text}</p>
-      {props.children}
-      {props.action && <span className="cta">{props.action}</span>}
-    </div>
-  </li>
-)
+const Card = props => {
+  let { ...others } = props
+  return (
+    <li className="card" {...others}>
+      {props.image && (
+        <div className="img">{<img src={props.image} alt="" />}</div>
+      )}
+      <div className="text">
+        <h2>
+          <Link to={props.link}>{props.title}</Link>
+        </h2>
+        <p>{props.text}</p>
+        {props.children}
+        {props.action && <span className="cta">{props.action}</span>}
+      </div>
+    </li>
+  )
+}
 
 export { Cards, Card }
 
