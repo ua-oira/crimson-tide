@@ -23,6 +23,7 @@ storiesOf('Main Wrapper', module).add(
         maxWidth: 960,
         minHeight: 500,
         padding: '0px 1.0875rem 1.45rem',
+      ~~~
     
     `)(() => (
     <Main>
