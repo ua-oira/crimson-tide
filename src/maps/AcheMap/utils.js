@@ -17,6 +17,6 @@ export function updatePercentiles(featureCollection, school, accessor) {
 
 export function getSchoolContribution(data, year, school, county) {
   const entry = data[year][county][0]
-  entry.value = entry[school] / entry.Total * 100
+  entry.value = (entry[school] / entry.Total) * 100
   return entry.value
 }

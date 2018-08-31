@@ -58,7 +58,7 @@ var Link = function Link(_ref) {
   }
   return _react2.default.createElement(
     'a',
-    _extends({ href: to, target: '_blank', rel: 'noopener' }, others),
+    _extends({ href: to, target: '_blank', rel: 'noopener noreferrer' }, others),
     children
   );
 };

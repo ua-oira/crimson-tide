@@ -113,7 +113,7 @@ export default class ControlPanel extends PureComponent {
                     <svg width="160" height="20">
                       <rect
                         height="20"
-                        width={Math.round(val / sortedSchools[0].val * 180)}
+                        width={Math.round((val / sortedSchools[0].val) * 180)}
                         fill={
                           key === school
                             ? key === 'UA'
