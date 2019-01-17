@@ -6,7 +6,7 @@ const Main = props => (
     <div
       style={{
         margin: '1em auto',
-        maxWidth: 960,
+        maxWidth: props.maxWidth || 960,
         minHeight: 500,
         padding: '0px 1.0875rem 1.45rem',
         paddingTop: 0,
