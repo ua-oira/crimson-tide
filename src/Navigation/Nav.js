@@ -32,7 +32,7 @@ export default class NavWithMenu extends React.Component {
 
     return (
       <ColorWrapper background={this.props.background}>
-        <Header>
+        <Header maxWidth={this.props.maxWidth}>
           <Logo img={this.props.image} to="/" onClick={closeMenu} />
           <Toggle onClick={this.toggle} active={menu} />
           <Navigation
@@ -55,7 +55,7 @@ const ColorWrapper = styled.nav`
 const Header = styled.div`
   display: flex;
   padding: 0px 1.0875rem;
-  max-width: 960px;
+  max-width: ${props => props.maxWidth || '960px'};
   justify-content: space-between;
   margin: 0 auto;
   justify-content: space-between;

@@ -7,7 +7,7 @@ Object.defineProperty(exports, "__esModule", {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _templateObject = _taggedTemplateLiteral(['\n  background: ', ';\n  overflow: hidden;\n'], ['\n  background: ', ';\n  overflow: hidden;\n']),
-    _templateObject2 = _taggedTemplateLiteral(['\n  display: flex;\n  padding: 0px 1.0875rem;\n  max-width: 960px;\n  justify-content: space-between;\n  margin: 0 auto;\n  justify-content: space-between;\n  align-items: center;\n  z-index: 2000;\n'], ['\n  display: flex;\n  padding: 0px 1.0875rem;\n  max-width: 960px;\n  justify-content: space-between;\n  margin: 0 auto;\n  justify-content: space-between;\n  align-items: center;\n  z-index: 2000;\n']),
+    _templateObject2 = _taggedTemplateLiteral(['\n  display: flex;\n  padding: 0px 1.0875rem;\n  max-width: ', ';\n  justify-content: space-between;\n  margin: 0 auto;\n  justify-content: space-between;\n  align-items: center;\n  z-index: 2000;\n'], ['\n  display: flex;\n  padding: 0px 1.0875rem;\n  max-width: ', ';\n  justify-content: space-between;\n  margin: 0 auto;\n  justify-content: space-between;\n  align-items: center;\n  z-index: 2000;\n']),
     _templateObject3 = _taggedTemplateLiteral(['\n  @media (max-width: 800px) {\n    position: absolute;\n    top: -100vh;\n    left: 0;\n    background: ', ';\n    width: 100%;\n    height: 100vh;\n    overflow-y: hidden;\n    transition: all 0.3s ease;\n    display: flex;\n    z-index: 4000;\n    flex-flow: column;\n    justify-content: center;\n    align-items: center;\n  }\n'], ['\n  @media (max-width: 800px) {\n    position: absolute;\n    top: -100vh;\n    left: 0;\n    background: ', ';\n    width: 100%;\n    height: 100vh;\n    overflow-y: hidden;\n    transition: all 0.3s ease;\n    display: flex;\n    z-index: 4000;\n    flex-flow: column;\n    justify-content: center;\n    align-items: center;\n  }\n']),
     _templateObject4 = _taggedTemplateLiteral(['\n  display: inline-block;\n  margin: 0.8em 0;\n  width: 200px;\n  height: 70px;\n  border-bottom: none;\n  background: url(', ');\n  background-size: 100% 100%;\n  background-repeat: no-repeat;\n  text-indent: -9999px;\n  z-index: 3000;\n  @media print {\n    * {\n      -webkit-print-color-adjust: exact;\n    }\n  }\n'], ['\n  display: inline-block;\n  margin: 0.8em 0;\n  width: 200px;\n  height: 70px;\n  border-bottom: none;\n  background: url(', ');\n  background-size: 100% 100%;\n  background-repeat: no-repeat;\n  text-indent: -9999px;\n  z-index: 3000;\n  @media print {\n    * {\n      -webkit-print-color-adjust: exact;\n    }\n  }\n']),
     _templateObject5 = _taggedTemplateLiteral(['\n  display: none;\n  width: 25px;\n  height: 25px;\n  z-index: 5000;\n  background: url(', ');\n  background-repeat: no-repeat;\n  @media (max-width: 800px) {\n    display: inline;\n  }\n'], ['\n  display: none;\n  width: 25px;\n  height: 25px;\n  z-index: 5000;\n  background: url(', ');\n  background-repeat: no-repeat;\n  @media (max-width: 800px) {\n    display: inline;\n  }\n']);
@@ -92,7 +92,7 @@ var NavWithMenu = function (_React$Component) {
         { background: this.props.background },
         _react2.default.createElement(
           Header,
-          null,
+          { maxWidth: this.props.maxWidth },
           _react2.default.createElement(Logo, { img: this.props.image, to: '/', onClick: closeMenu }),
           _react2.default.createElement(Toggle, { onClick: this.toggle, active: menu }),
           _react2.default.createElement(
@@ -118,7 +118,9 @@ exports.default = NavWithMenu;
 var ColorWrapper = _styledComponents2.default.nav(_templateObject, function (props) {
   return props.background;
 });
-var Header = _styledComponents2.default.div(_templateObject2);
+var Header = _styledComponents2.default.div(_templateObject2, function (props) {
+  return props.maxWidth || '960px';
+});
 var Navigation = _styledComponents2.default.div(_templateObject3, function (props) {
   return props.background;
 });
