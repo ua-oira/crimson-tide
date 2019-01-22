@@ -8,7 +8,7 @@
 
 Reusable React components for The University of Alabama 🐘
 
-Work in progress
+Mostly abandoned.
 
 ## Docs
 View storybook at [crimson-tide.netlify.com](http://crimson-tide.netlify.com)
