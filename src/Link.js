@@ -1,9 +1,7 @@
 import React from 'react'
-import GatsbyLink from 'gatsby-link'
 import Obfuscate from 'react-obfuscate'
 
-const Link = ({ children, to, ...others }) => {
-  const internal = /^\/(?!\/)/.test(to)
+const Link = ({ as: Element = 'a', children, to, ...others }) => {
   const phone = /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/.test(to)
   const email = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
     to
@@ -12,11 +10,11 @@ const Link = ({ children, to, ...others }) => {
     to
   )
 
-  if (internal) {
+  if (Element) {
     return (
-      <GatsbyLink to={to} {...others}>
+      <Element href={to} {...others}>
         {children}
-      </GatsbyLink>
+      </Element>
     )
   } else if (phone) {
     return (
@@ -36,12 +34,13 @@ const Link = ({ children, to, ...others }) => {
         {children}
       </a>
     )
+  } else {
+    return (
+      <a href={to} target="_blank" rel="noopener noreferrer" {...others}>
+        {children}
+      </a>
+    )
   }
-  return (
-    <a href={to} target="_blank" rel="noopener noreferrer" {...others}>
-      {children}
-    </a>
-  )
 }
 
 export default Link

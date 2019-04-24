@@ -10,10 +10,6 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _gatsbyLink = require('gatsby-link');
-
-var _gatsbyLink2 = _interopRequireDefault(_gatsbyLink);
-
 var _reactObfuscate = require('react-obfuscate');
 
 var _reactObfuscate2 = _interopRequireDefault(_reactObfuscate);
@@ -23,19 +19,20 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 var Link = function Link(_ref) {
-  var children = _ref.children,
+  var _ref$as = _ref.as,
+      Element = _ref$as === undefined ? 'a' : _ref$as,
+      children = _ref.children,
       to = _ref.to,
-      others = _objectWithoutProperties(_ref, ['children', 'to']);
+      others = _objectWithoutProperties(_ref, ['as', 'children', 'to']);
 
-  var internal = /^\/(?!\/)/.test(to);
   var phone = /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/.test(to);
   var email = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(to);
   var map = /^[-+]?([1-8]?\d(\.\d+)?|90(\.0+)?),\s*[-+]?(180(\.0+)?|((1[0-7]\d)|([1-9]?\d))(\.\d+)?)$/.test(to);
 
-  if (internal) {
+  if (Element) {
     return _react2.default.createElement(
-      _gatsbyLink2.default,
-      _extends({ to: to }, others),
+      Element,
+      _extends({ href: to }, others),
       children
     );
   } else if (phone) {
@@ -55,12 +52,13 @@ var Link = function Link(_ref) {
       }, others),
       children
     );
+  } else {
+    return _react2.default.createElement(
+      'a',
+      _extends({ href: to, target: '_blank', rel: 'noopener noreferrer' }, others),
+      children
+    );
   }
-  return _react2.default.createElement(
-    'a',
-    _extends({ href: to, target: '_blank', rel: 'noopener noreferrer' }, others),
-    children
-  );
 };
 
 exports.default = Link;
