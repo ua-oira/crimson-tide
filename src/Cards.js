@@ -13,9 +13,8 @@ const Cards = props => (
 )
 
 const Card = props => {
-  let { ...others } = props
   return (
-    <li className="card" {...others}>
+    <li className="card" {...props}>
       {props.image && (
         <div className="img">{<img src={props.image} alt="" />}</div>
       )}
