@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import styled from 'styled-components'
 import withState from 'recompose/withState'
 
@@ -11,8 +10,8 @@ const Tabs = withState('tab', 'updateTab')(
     const activeChild = activeTab
       ? children.filter(c => c.props.title == activeTab)[0]
       : tab
-        ? children.filter(c => c.props.title == tab)[0]
-        : children[0]
+      ? children.filter(c => c.props.title == tab)[0]
+      : children[0]
 
     return (
       <Styles>
