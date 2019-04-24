@@ -11,10 +11,6 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _gatsbyLink = require('gatsby-link');
-
-var _gatsbyLink2 = _interopRequireDefault(_gatsbyLink);
-
 var _styledComponents = require('styled-components');
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
