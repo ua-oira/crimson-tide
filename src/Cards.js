@@ -25,10 +25,9 @@ const Card = props => {
         </h2>
         <p>{props.text}</p>
         {props.children}
-        {props.action &&
-          props.action.length >= 1 && (
-            <span className="cta">{props.action}</span>
-          )}
+        {props.action && props.action.length >= 1 && (
+          <span className="cta">{props.action}</span>
+        )}
       </div>
     </li>
   )
