@@ -32,7 +32,7 @@ var Link = function Link(_ref) {
   if (Element) {
     return _react2.default.createElement(
       Element,
-      _extends({ href: to }, others),
+      _extends({ to: to }, others),
       children
     );
   } else if (phone) {

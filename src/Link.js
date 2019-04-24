@@ -12,7 +12,7 @@ const Link = ({ as: Element = 'a', children, to, ...others }) => {
 
   if (Element) {
     return (
-      <Element href={to} {...others}>
+      <Element to={to} {...others}>
         {children}
       </Element>
     )
