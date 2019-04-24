@@ -23,11 +23,11 @@ storiesOf('Link', module)
     
     `)(() => (
       <div>
-        <Link to="/Boom">React Router link</Link><br/>
         <Link to="http://coston.io">Regular link, opens new tab</Link><br/>
         <Link to="305-205-4353">Children not rendered</Link><br/>
         <Link to="hello@ua.edu">Children not rendered</Link><br/>
         <Link to="33.2084338,-87.5472800">Map to East Annex</Link><br/>
+        <Link as={"button"} to="/Boom">custom component link</Link><br/>
       </div>
     ))
 )
