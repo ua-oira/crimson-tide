@@ -18,18 +18,18 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-var Link = function Link(_ref) {
-  var _ref$as = _ref.as,
-      Element = _ref$as === undefined ? 'a' : _ref$as,
-      children = _ref.children,
-      to = _ref.to,
-      others = _objectWithoutProperties(_ref, ['as', 'children', 'to']);
+var Link = function Link(props) {
+  var _props$as = props.as,
+      Element = _props$as === undefined ? 'a' : _props$as,
+      children = props.children,
+      to = props.to,
+      others = _objectWithoutProperties(props, ['as', 'children', 'to']);
 
   var phone = /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/.test(to);
   var email = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(to);
   var map = /^[-+]?([1-8]?\d(\.\d+)?|90(\.0+)?),\s*[-+]?(180(\.0+)?|((1[0-7]\d)|([1-9]?\d))(\.\d+)?)$/.test(to);
 
-  if (Element) {
+  if (props.as) {
     return _react2.default.createElement(
       Element,
       _extends({ to: to }, others),

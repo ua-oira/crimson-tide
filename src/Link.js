@@ -1,7 +1,9 @@
 import React from 'react'
 import Obfuscate from 'react-obfuscate'
 
-const Link = ({ as: Element = 'a', children, to, ...others }) => {
+const Link = props => {
+  const { as: Element = 'a', children, to, ...others } = props
+
   const phone = /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/.test(to)
   const email = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
     to
@@ -10,7 +12,7 @@ const Link = ({ as: Element = 'a', children, to, ...others }) => {
     to
   )
 
-  if (Element) {
+  if (props.as) {
     return (
       <Element to={to} {...others}>
         {children}
