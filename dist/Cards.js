@@ -31,8 +31,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
 var Cards = function Cards(props) {
   return _react2.default.createElement(
     Deck,
@@ -50,11 +48,9 @@ var Cards = function Cards(props) {
 };
 
 var Card = function Card(props) {
-  var others = _objectWithoutProperties(props, []);
-
   return _react2.default.createElement(
     'li',
-    _extends({ className: 'card' }, others),
+    _extends({ className: 'card' }, props),
     props.image && _react2.default.createElement(
       'div',
       { className: 'img' },
