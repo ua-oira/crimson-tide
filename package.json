@@ -22,7 +22,7 @@
     "watch": "babel -w -d dist src",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
     "test": "jest",
-    "preversion": "npm install && npm run clean && npm run format && npm run build && npm run build-storybook",
+    "preversion": "npm run clean && npm run format && npm run build && npm run build-storybook",
     "postpublish": "git push && git push --tag",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
@@ -84,12 +84,11 @@
     "d3-array": "^1.2.4",
     "d3-collection": "^1.0.7",
     "d3-scale": "^2.1.2",
-    "gatsby-link": "^1.6.46",
     "immutable": "^3.8.2",
     "react-headroom": "^2.2.2",
     "react-helmet": "^5.2.0",
-    "react-obfuscate": "^2.1.7",
+    "react-obfuscate": "^3.6.0",
     "recompose": "^0.30.0",
-    "styled-components": "^3.4.5"
+    "styled-components": "^4.2.0"
   }
 }
