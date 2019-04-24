@@ -84,7 +84,7 @@ var ShortFooter = function (_React$Component) {
             '|',
             _react2.default.createElement(
               StyledLink,
-              { to: '/contact/' },
+              { to: 'http://oira.ua.edu/new/contact' },
               'OIRA Contact'
             )
           )

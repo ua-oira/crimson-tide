@@ -25,7 +25,9 @@ const LogoFooter = props => {
             {'|'}
             <StyledLink to="205-348-7200" />
             {'|'}
-            <StyledLink to="/contact/">OIRA Contact</StyledLink>
+            <StyledLink to="http://oira.ua.edu/new/contact/">
+              OIRA Contact
+            </StyledLink>
           </RightSide>
         </ContentWidth>
       </PageWidth>

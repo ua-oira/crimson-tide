@@ -76,7 +76,7 @@ var LogoFooter = function LogoFooter(props) {
           '|',
           _react2.default.createElement(
             StyledLink,
-            { to: '/contact/' },
+            { to: 'http://oira.ua.edu/new/contact/' },
             'OIRA Contact'
           )
         )
