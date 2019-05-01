@@ -72,7 +72,7 @@ const Left = styled.div`
   float: left;
   @media print {
     -webkit-print-color-adjust: exact;
-      color-adjust: exact !important;
+    color-adjust: exact !important;
   }
 `
 const Right = styled.div`
