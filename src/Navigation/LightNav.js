@@ -45,6 +45,7 @@ const Logo = styled(Link)`
   @media print {
     * {
       -webkit-print-color-adjust: exact;
+      color-adjust: exact !important;
     }
   }
 `
@@ -71,6 +72,7 @@ const Left = styled.div`
   float: left;
   @media print {
     -webkit-print-color-adjust: exact;
+      color-adjust: exact !important;
   }
 `
 const Right = styled.div`
