@@ -26,7 +26,3 @@ yarn start
 ```sh
 yarn run build
 ```
-## Deploy
-```sh
-bash ./deploy.tool
-```
