@@ -11,8 +11,8 @@ import LogoFooter from './Footer/LogoFooter.js'
 
 // Logos
 import ChimeIn from './logos/chime-in.svg'
-import ChimeIn2018 from './logos/chime-in2018.svg'
-import ChimeIn2022 from './logos/chime-in2022.svg'
+import ChimeIn3 from './logos/chime-in2018.svg'
+import ChimeIn5 from './logos/chime-in2022.svg'
 import GDGD from './logos/gdgd.svg'
 import OIRALogo from './logos/oira-logo.svg'
 import ALAIR from './logos/alair-logo.svg'
@@ -32,6 +32,8 @@ export {
   LogoFooter,
   // LOGOS
   ChimeIn,
+  ChimeIn3,
+  ChimeIn5,
   GDGD,
   OIRALogo,
   ALAIR,
