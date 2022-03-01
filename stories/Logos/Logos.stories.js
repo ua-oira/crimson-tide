@@ -20,6 +20,17 @@ storiesOf('Logos', module).add(
 )
 
 storiesOf('Logos', module).add(
+  'ChimeIn5',
+  withInfo(`
+      
+      ~~~js
+      {ChimeIn5}
+      ~~~
+    
+    `)(() => <img style={BG} src={ChimeIn5} />)
+)
+
+storiesOf('Logos', module).add(
   'Good Data, Good Decisions',
   withInfo(`
       
