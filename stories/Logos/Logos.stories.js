@@ -4,7 +4,7 @@ import { action } from '@storybook/addon-actions'
 import { linkTo } from '@storybook/addon-links'
 import { withInfo } from '@storybook/addon-info'
 
-import { ChimeIn, GDGD, OIRALogo } from '../../src/index'
+import { ChimeIn, ChimeIn5, GDGD, OIRALogo } from '../../src/index'
 
 const BG = { backgroundImage: 'linear-gradient(to right, #7474bf, #348ac7)' }
 
