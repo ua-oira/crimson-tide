@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Cards = exports.Card = exports.NavWithMenu = exports.Link = exports.Tab = exports.Tabs = exports.OiraStyles = exports.ALAIR = exports.OIRALogo = exports.GDGD = exports.ChimeIn = exports.ChimeIn2018 = exports.ChimeIn2022 = exports.LogoFooter = exports.ShortFooter = exports.Main = exports.PageTitle = exports.LightNav = exports.LightLink = exports.NavLink = exports.Nav = undefined;
+exports.Cards = exports.Card = exports.NavWithMenu = exports.Link = exports.Tab = exports.Tabs = exports.OiraStyles = exports.ALAIR = exports.OIRALogo = exports.GDGD = exports.ChimeIn = exports.LogoFooter = exports.ShortFooter = exports.Main = exports.PageTitle = exports.LightNav = exports.LightLink = exports.NavLink = exports.Nav = undefined;
 
 var _Nav = require('./Navigation/Nav.js');
 
@@ -43,11 +43,15 @@ var _LogoFooter2 = _interopRequireDefault(_LogoFooter);
 
 var _chimeIn = require('./logos/chime-in.svg');
 
-var _chimeIn2018 = require('./logos/chime-in2018.svg');
-
-var _chimeIn2022 = require('./logos/chime-in2022.svg');
-
 var _chimeIn2 = _interopRequireDefault(_chimeIn);
+
+var _chimeIn3 = require('./logos/chime-in2018.svg');
+
+var _chimeIn4 = _interopRequireDefault(_chimeIn3);
+
+var _chimeIn5 = require('./logos/chime-in2022.svg');
+
+var _chimeIn6 = _interopRequireDefault(_chimeIn5);
 
 var _gdgd = require('./logos/gdgd.svg');
 
@@ -85,8 +89,8 @@ exports.Main = _Main2.default;
 exports.ShortFooter = _ShortFooter2.default;
 exports.LogoFooter = _LogoFooter2.default;
 exports.ChimeIn = _chimeIn2.default;
-exports.ChimeIn2018 = _chimeIn2018;
-exports.ChimeIn2022 = _chimeIn2022;
+exports.ChimeIn3 = _chimeIn4.default;
+exports.ChimeIn5 = _chimeIn6.default;
 exports.GDGD = _gdgd2.default;
 exports.OIRALogo = _oiraLogo2.default;
 exports.ALAIR = _alairLogo2.default;
