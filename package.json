@@ -1,6 +1,9 @@
 {
-  "name": "crimson-tide",
-  "version": "0.4.4",
+  "name": "@ua-oira/crimson-tide",
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
+  },
+  "version": "0.5.0",
   "description": "Reusable React components for The University of Alabama 🐘",
   "main": "dist/index.js",
   "author": "Coston Perkins <coston.perkins@ua.edu> (https://coston.io)",
