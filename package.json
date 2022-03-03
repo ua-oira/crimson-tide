@@ -3,7 +3,7 @@
   "publishConfig": {
     "registry":"https://npm.pkg.github.com"
   },
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "Reusable React components for The University of Alabama 🐘",
   "main": "dist/index.js",
   "author": "Coston Perkins <coston.perkins@ua.edu> (https://coston.io)",
